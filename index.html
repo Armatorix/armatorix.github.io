@@ -1,1 +1,60 @@
-Hello World
+<!doctype html>
+<html>
+  <head>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="sketch.js"></script>
+    <style>
+  
+  body
+  {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    
+  } 
+  div.info {
+    opacity:0.8;
+    filter: alpha(opacity=20);
+    font-size: 5em;
+    text-align: center;
+    vertical-align: middle;
+    background-color:#000; 
+    color:#FFF;
+    width:40%; 
+    height:10%; 
+    z-index:20;
+    top:20%; 
+    left:30%; 
+    position:fixed; 
+  }
+  
+  div.popup {
+    position: fixed; 
+    left: 50%; top: 50%;
+    opacity:0.4;
+    width: 50%; height: 50%;
+    background: white;     
+    border-radius: 3px;
+    padding: 10px;
+    z-index: 11;
+    height: 7%;
+    width: 20%
+  }
+  
+  div div.popup {
+      position: fixed;
+      top: 0;
+      right: 10%;
+      bottom: 10%;
+      left: 10%;
+      background-color: red;
+      background: blue;
+      opacity: .6;
+      z-index: 9999999;
+      text-align:center;
+    }
+</style>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+  <div class="info">Strona w budowie.</div>
+  </body>
+</html>
