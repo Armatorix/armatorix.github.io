@@ -42,3 +42,16 @@ h1 {
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+.spin {
+  animation: spin 5s linear infinite;
+  animation-timing-function: ease-in-out;
+}
