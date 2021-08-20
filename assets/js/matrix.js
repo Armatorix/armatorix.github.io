@@ -6,7 +6,7 @@ var symbolSize = 48;
 function setup() {
   createCanvas(
     window.innerWidth,
-    document.body.offsetHeight
+    document.body.offsetHeight * 2
   );
   background(0);
 
@@ -25,7 +25,7 @@ function setup() {
 function windowResized() {
   resizeCanvas(
     window.innerWidth,
-    document.body.offsetHeight
+    document.body.offsetHeight * 2
   );
 }
 
