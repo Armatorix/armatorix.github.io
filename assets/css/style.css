@@ -583,6 +583,11 @@ section .container {
   border: 2px solid #18d26e;
 }
 
+.resume .list-group-item {
+  background-color: #040404;
+  color: #fff;
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
