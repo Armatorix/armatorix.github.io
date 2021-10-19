@@ -1,8 +1,8 @@
 
 var streams = [];
-var fadeInterval = 1.6;
+var fadeInterval = 1;
 var symbolSize = 48;
-
+var symbolStep = 24;
 function setup() {
   createCanvas(
     window.innerWidth - 20,
@@ -65,8 +65,8 @@ function Symbol(x, y, speed, first, opacity) {
 
 function Stream() {
   this.symbols = [];
-  this.totalSymbols = round(random(4, 14));
-  this.speed = random(2, 6);
+  this.totalSymbols = round(random(21, 37));
+  this.speed = random(1, 10);
 
   this.generateSymbols = function (x, y) {
     var opacity = 255;
@@ -94,9 +94,13 @@ function Stream() {
       } else {
         fill(0, 255, 70, symbol.opacity);
       }
-      text(symbol.value, symbol.x, symbol.y);
+      text(symbol.value, symbol.x, steping(symbol.y,symbolStep));
       symbol.rain();
       symbol.setToRandomSymbol();
     });
   }
+}
+
+function steping(x,y) {
+  return x-x%y
 }
