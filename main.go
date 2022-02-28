@@ -44,6 +44,26 @@ func (m *Me) rebuildHTML() {
 	}
 }
 
+func (m *Me) rebuildLatex() {
+	t, err := template.New("tex").ParseFiles("./templates/main.tex.tpl")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	f, err := os.OpenFile("main.tex", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer func() {
+		if err := f.Close(); err != nil {
+			log.Fatal(err)
+		}
+	}()
+
+	if err = t.Lookup("main.tex.tpl").Execute(f, m); err != nil {
+		log.Fatal(err)
+	}
+}
 func main() {
 	meJSON, err := ioutil.ReadFile("./templates/me.json")
 	if err != nil {
@@ -56,4 +76,5 @@ func main() {
 	}
 
 	me.rebuildHTML()
+	me.rebuildLatex()
 }
