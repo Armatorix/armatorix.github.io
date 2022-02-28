@@ -443,8 +443,9 @@
                         </div>
                     </a>
                 </div>
-{{end}}
             </div>
+{{end}}
+        </div>
     </section><!-- End Services Section -->
 
     <!-- ======= Contact Section ======= -->
