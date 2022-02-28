@@ -432,62 +432,18 @@
                 <h2>Projects</h2>
                 <p>My projects</p>
             </div>
-
+{{range .Projects}}
             <div class="row">
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/OBSOverlays">
+                    <a href="{{.URL}}">
                         <div class="icon-box">
-                            <div class="icon"><i class="ri-line-chart-line"></i></div>
-                            <h4>Chess.com livestats</h4>
-                            <p>Simple service with users live stats for OBS usage written with HTML, Bootstrap and jQuery.</p>
+                            <div class="icon"><i class="{{.Icon}}"></i></div>
+                            <h4>{{.Title}}</h4>
+                            <p>{{.Content}}</p>
                         </div>
                     </a>
                 </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="#">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4>Wagapp</h4>
-                            <p>Web app for storing car weight measurements. Hosted on GCP. Written with Golang and React.js with Auth0 authentication.</p>
-                        </div>
-                    </a>
-                </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/BitLyke">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-link"></i></div>
-                            <h4>Bitlyke</h4>
-                            <p>Bit.ly like URL shortener hosted on Heroku. Written in Golang.</p>
-                        </div>
-                    </a>
-                </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/SlackUp">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-slack-line"></i></div>
-                            <h4>SlackUp</h4>
-                            <p>Slack report generator for your own developer convenience.</p>
-                        </div>
-                    </a>
-                </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/discordbot-ramen">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-discord-line"></i></div>
-                            <h4>Discord bot</h4>
-                            <p>Python bot for spamming random google search images when using keywords. Hosted on heroku.</p>
-                        </div>
-                    </a>
-                </div>
-
+{{end}}
             </div>
     </section><!-- End Services Section -->
 

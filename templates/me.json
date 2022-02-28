@@ -1,0 +1,34 @@
+{
+    "projects": [
+        {
+            "icon": "ri-line-chart-line",
+            "url": "https://github.com/Armatorix/OBSOverlays",
+            "title": "Chess.com livestats",
+            "content": "Simple service with users live stats for OBS usage written with HTML, Bootstrap and jQuery."
+        },
+        {
+            "icon": "bx bx-file",
+            "url": "#",
+            "title": "Wagapp",
+            "content": "Web app for storing car weight measurements. Hosted on GCP. Written with Golang and React.js with Auth0 authentication."
+        },
+        {
+            "icon": "ri-link",
+            "url": "https://github.com/Armatorix/BitLyke",
+            "title": "Bitlyke",
+            "content": "Bit.ly like URL shortener hosted on Heroku. Written in Golang."
+        },
+        {
+            "icon": "ri-slack-line",
+            "url": "https://github.com/Armatorix/SlackUp",
+            "title": "SlackUp",
+            "content": "Slack report generator for your own developer convenience."
+        },
+        {
+            "icon": "ri-discord-line",
+            "url": "https://github.com/Armatorix/discordbot-ramen",
+            "title": "Discord bot",
+            "content": "Python bot for spamming random google search images when using keywords. Hosted on heroku."
+        }
+    ]
+}
