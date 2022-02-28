@@ -432,19 +432,23 @@
                 <h2>Projects</h2>
                 <p>My projects</p>
             </div>
-{{range .Projects}}
             <div class="row">
+{{range $i, $p := .Projects}}
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="{{.URL}}">
+                    <a href="{{$p.URL}}">
                         <div class="icon-box">
-                            <div class="icon"><i class="{{.Icon}}"></i></div>
-                            <h4>{{.Title}}</h4>
-                            <p>{{.Content}}</p>
+                            <div class="icon"><i class="{{$p.Icon}}"></i></div>
+                            <h4>{{$p.Title}}</h4>
+                            <p>{{$p.Content}}</p>
                         </div>
                     </a>
                 </div>
+    {{if splitp $i}}
             </div>
+            <div class="row">
+    {{end}}
 {{end}}
+            </div>  
         </div>
     </section><!-- End Services Section -->
 

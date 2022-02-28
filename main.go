@@ -20,7 +20,11 @@ type Me struct {
 }
 
 func (m *Me) rebuildHTML() {
-	t, err := template.New("html").ParseFiles("./templates/index.html.tpl")
+	t, err := template.New("html").Funcs(template.FuncMap{
+		"splitp": func(i int) bool {
+			return i != 0 && i != len(m.Projects)-1 && (i+1)%3 == 0
+		},
+	}).ParseFiles("./templates/index.html.tpl")
 	if err != nil {
 		log.Fatal(err)
 	}
