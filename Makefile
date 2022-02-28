@@ -10,6 +10,7 @@ build-tpls:
 build-tex:
 	pdflatex main.tex
 	rm main.aux main.out main.log main.tex
+	mv main.pdf godev_wsokolowski.pdf
 
 .PHONY: install-tex
 install-tex:
