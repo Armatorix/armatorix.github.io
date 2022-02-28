@@ -40,6 +40,7 @@
                 <ul>
                     <li><a class="nav-link active" href="">Home</a></li>
                     <li><a class="nav-link" href="#resume">Resume</a></li>
+                    <li><a class="nav-link" href="./godev_wsokolowski.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li>
                     <li><a class="nav-link" href="#about">About</a></li>
                     <li><a class="nav-link" href="#projects">Projects</a></li>
                     <li><a class="nav-link" href="#contact">Contact</a></li>
