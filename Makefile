@@ -15,3 +15,7 @@ build-tex:
 .PHONY: install-tex
 install-tex:
 	sudo apt-get install texlive-full
+
+.PHONY: run
+run:
+	docker run -p 8000:8000 -v $(pwd):/dummy python:slim-buster python -m http.server --directory /dumm
