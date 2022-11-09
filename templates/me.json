@@ -4,7 +4,14 @@
             "icon": "ri-line-chart-line",
             "url": "https://github.com/Armatorix/OBSOverlays",
             "title": "Chess.com livestats",
-            "content": "Simple service with users live stats for OBS usage written with HTML, Bootstrap and jQuery."
+            "content": "Simple service with users live stats for OBS usage written with HTML, Bootstrap and jQuery.",
+            "technologies": {
+                "languages": [],
+                "management": [],
+                "databases": [],
+                "cloud": "",
+                "other": []
+            }
         },
         {
             "icon": "bx bx-file",
@@ -43,4 +50,4 @@
             "content": "JQ like CLI tool for HTML except JSON. Crafted for personal usage."
         }
     ]
-}
+}  
