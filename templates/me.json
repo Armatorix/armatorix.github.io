@@ -29,6 +29,12 @@
             "url": "https://github.com/Armatorix/discordbot-ramen",
             "title": "Discord bot",
             "content": "Python bot for spamming random google search images when using keywords. Hosted on heroku."
+        },
+        {
+            "icon": "ri-numbers-fill",
+            "url": "https://github.com/Armatorix/smallpaf",
+            "title": "SmallPAF",
+            "content": "Service for asynchronous JIRA estimations. Uses integrations with JIRA and simple email-based authentication. Deployed at https://smallpaf.fly.dev/."
         }
     ]
 }
