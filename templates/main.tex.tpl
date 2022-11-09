@@ -81,11 +81,26 @@
 %-----------EXPERIENCE-----------------
 \section{Experience}
 
-
 % 
-% Nomtek
+% Smallpdf
 % 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\\
+\end{tabular*}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Smallpdf} & Remote \\
+    \subitem Senior Backend Engineer &  Feb. 2022 - now \\ \\
+    \subitem \textbf{eSign tool} & \textit{Go} \\
+    \subitem Introducing Golang best practices \\
+    \subitem Providing eventsourcing based service \\
+    \subitem Introducing Datadog tracing and service monitoring \\
+\end{tabular*}
+
+% 
+% IQVIA
+% 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\\
 \end{tabular*}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{IQVIA} & Remote \\
@@ -97,11 +112,12 @@
     \subitem Doing security upgrades \\
     \subitem Introducing application monitoring \\
 \end{tabular*}
-\\\\
+
 % 
 % Nomtek
 % 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\\
 \end{tabular*}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{Nomtek} & Remote/Wrocław, Poland \\
@@ -164,10 +180,6 @@
 \end{tabular*}
  
 
-
-
-% \newpage
-
 %-----------PROJECTS-----------------
 \section{Projects}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -192,6 +204,8 @@
 
       
 \end{tabular*}
+
+\newpage
 
 \section{Languages}
   \resumeSubHeadingListStart
