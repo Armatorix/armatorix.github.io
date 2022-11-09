@@ -35,6 +35,12 @@
             "url": "https://github.com/Armatorix/smallpaf",
             "title": "SmallPAF",
             "content": "Service for asynchronous JIRA estimations. Uses integrations with JIRA and simple email-based authentication. Deployed at https://smallpaf.fly.dev/."
+        },
+        {
+            "icon": "ri-html5-fill",
+            "url": "https://github.com/Armatorix/jh",
+            "title": "JH",
+            "content": "JQ like CLI tool for HTML except JSON. Crafted for personal usage."
         }
     ]
 }
