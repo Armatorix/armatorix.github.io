@@ -14,7 +14,7 @@ build-tex:
 
 .PHONY: install-tex
 install-tex:
-	sudo apt-get install texlive-full
+	sudo apt-get -y --fix-missing install texlive-full
 
 .PHONY: run
 run:

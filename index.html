@@ -61,6 +61,8 @@
                         height="18px"></a>
                 <a href="https://www.codewars.com/users/Armatorix" class="codewars" data-toggle="tooltip"
                     data-placement="top" title="codewars.com"><img src="./assets/img/codewars.svg" height="18px"></a>
+                <a href="https://play.picoctf.org/users/armatorix" class="picoctf" data-toggle="tooltip"
+                    data-placement="top" title="picoctf.org"><img src="./assets/img/picoctf.svg" height="18px"></a>
                 <a href="https://www.chess.com/member/armatorix" class="chesscom" data-toggle="tooltip"
                     data-placement="top" title="chess.com"><img src="./assets/img/chesscom.png" height="18px"></a>
             </div>
