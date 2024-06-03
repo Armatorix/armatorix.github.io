@@ -93,7 +93,11 @@
     \subitem \textbf{Scheduling} & \textit{Go, React} \\
     \subitem Providing platform core - scheduling algorithm \\
     \subitem Working as full-stack: frontend, backend and ops \\
+    \subitem \textbf{Platform} & \textit{Go, React} \\
     \subitem Providing limits-friendly integrations with Hubspot/Salesforce/Zapier \\
+    \subitem Provide app deployment in GKE cluster \\
+    \subitem Setup Caddy as custom loadbalancer \\
+
 \end{tabular*}
 
 
