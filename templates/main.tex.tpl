@@ -82,6 +82,22 @@
 \section{Experience}
 
 % 
+% Rift
+% 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\\
+\end{tabular*}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{rift} & Remote \\
+    \subitem Senior Backend Engineer &  Mar. 2023 - now \\ \\
+    \subitem \textbf{Scheduling} & \textit{Go, React} \\
+    \subitem Providing platform core - scheduling algorithm \\
+    \subitem Working as full-stack: frontend, backend and ops \\
+    \subitem Providing limits-friendly integrations with Hubspot/Salesforce/Zapier \\
+\end{tabular*}
+
+
+% 
 % Smallpdf
 % 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -89,7 +105,7 @@
 \end{tabular*}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{Smallpdf} & Remote \\
-    \subitem Senior Backend Engineer &  Feb. 2022 - now \\ \\
+    \subitem Senior Backend Engineer &  Feb. 2022 - Mar. 2023 \\ \\
     \subitem \textbf{eSign tool} & \textit{Go} \\
     \subitem Introducing Golang best practices \\
     \subitem Providing eventsourcing based service \\
