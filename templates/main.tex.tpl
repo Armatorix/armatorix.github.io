@@ -195,12 +195,22 @@
 \\
 \end{tabular*}
  
-
+\pagebreak
 %-----------PROJECTS-----------------
 \section{Projects}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 
-    \textbf{\href{https://twitch-overlays.herokuapp.com/}{Chess.com updater}} & \textit{HTML,jQuery} \\
+    \textbf{\href{https://ai-mma.dev/}{AI MMA}} & \textit{React,Go} \\
+      \subitem Service with ML predictions for MMA fights & \textit{Fly.io}\\ \\
+
+    \textbf{\href{https://smallpaf.wsokol.dev/}{SmallPAF (Planning Async Format)}} & \textit{React,Go} \\
+      \subitem Tool for async ticket estimations & \textit{Fly.io}\\ \\
+
+      
+    \textbf{\href{https://github.com/Armatorix/hearing}{Hearing app}} & \textit{React} \\
+      \subitem Simple tool that helps verify frequency range of hearing & \textit{Fly.io}\\ \\
+
+    \textbf{Chess.com updater} & \textit{HTML,jQuery} \\
       \subitem Simple service with users live stats for OBS usage & \textit{Heroku}\\ \\
 
     \textbf{\href{http://wagapp.pl/}{Wagapp}} & \textit{React, Go}\\
