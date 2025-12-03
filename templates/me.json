@@ -138,6 +138,22 @@
 
         },
         {
+            "company": "Family farming",
+            "location": "Zębowice, Poland",
+            "position": "Farmer",
+            "period": "Jun. 2010 - Present",
+            "projects": [
+                {
+                    "name": "Crop production",
+                    "responsibilities": [
+                        "Staring Integrated Production in crops",
+                        "Using modern technologies in farming",
+                        "Operating agricultural machinery"
+                    ]
+                }
+            ]
+        },
+        {
             "company": "rift",
             "location": "Remote",
             "position": "Senior Backend Engineer",
