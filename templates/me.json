@@ -13,16 +13,25 @@
     },
     "social": [
         {
+            "name": "X",
+            "url": "https://x.com/Armatorix",
+            "icon": "bi bi-twitter",
+            "title": "twitter.com",
+            "username": "Armatorix"
+        },
+        {
             "name": "LinkedIn",
             "url": "https://www.linkedin.com/in/Armatorix",
             "icon": "bi bi-linkedin",
-            "title": "linkedin.com"
+            "title": "linkedin.com",
+            "username": "armatorix"
         },
         {
             "name": "GitHub",
             "url": "https://github.com/Armatorix",
             "icon": "bi bi-github",
-            "title": "github.com"
+            "title": "github.com",
+            "username": "Armatorix"
         },
         {
             "name": "StackOverflow",
