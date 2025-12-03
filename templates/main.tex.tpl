@@ -53,6 +53,18 @@
   {{- range .Social}}{{if eq .Name "LinkedIn"}}
   \linkedin{ {{- .Username -}} }
   {{- end}}{{end}}
+  {{- range .Social}}{{if eq .Name "X"}}
+  \twitter{ {{- .Username -}} }
+  {{- end}}{{end}}
+  {{- range .Social}}{{if eq .Name "StackOverflow"}}
+  \printinfo{\faStackOverflow}{ {{- .Title -}} }[{{.URL}}]
+  {{- end}}{{end}}
+  {{- range .Social}}{{if eq .Name "HackerRank"}}
+  \printinfo{\faCode}{ {{- .Title -}} }[{{.URL}}]
+  {{- end}}{{end}}
+  {{- range .Social}}{{if eq .Name "Codewars"}}
+  \printinfo{\faCode}{ {{- .Title -}} }[{{.URL}}]
+  {{- end}}{{end}}
 }
 
 \makecvheader
@@ -64,11 +76,17 @@
 {{- range $i, $exp := .Experience}}
 \cvevent{ {{- $exp.Position -}} }{ {{- $exp.Company -}} }{ {{- $exp.Period -}} }{ {{- $exp.Location -}} }
 {{- if $exp.Projects}}
+{{- range $exp.Projects}}
+{{- if .Name}}
+\textbf{ {{- .Name -}} }
+{{- if .Technologies}} -- \textit{ {{- join .Technologies ", " -}} }{{end}}
+{{- end}}
 \begin{itemize}
-{{- range $exp.Projects}}{{range .Responsibilities}}
+{{- range .Responsibilities}}
 \item {{.}}
-{{- end}}{{end}}
+{{- end}}
 \end{itemize}
+{{- end}}
 {{- end}}
 {{- if ne $i (sub (len $.Experience) 1)}}
 
@@ -96,13 +114,32 @@
 {{- end}}
 {{- end}}
 
-\cvsection{Skills}
-\cvtag{Golang}
-\cvtag{Python}
+
+\cvsubsection{Cloud \& DevOps}
 \cvtag{AWS}
 \cvtag{GCP}
 \cvtag{Docker}
 \cvtag{Kubernetes}
+\cvtag{Terraform}
+\cvtag{Ansible}
+\cvtag{Chef}
+
+\medskip
+
+\cvsubsection{Databases}
+\cvtag{Scylla}
+\cvtag{MySQL}
+\cvtag{PostgreSQL}
+\cvtag{MongoDB}
+\cvtag{Elasticsearch}
+
+\medskip
+
+\cvsubsection{Tools}
+\cvtag{DataDog}
+\cvtag{Prometheus}
+\cvtag{Grafana}
+\cvtag{Docker Swarm}
 
 \cvsection{Languages}
 {{- range .Languages}}
@@ -115,5 +152,24 @@
 {{- end}}
 
 \end{paracol}
+
+\cvsection{Projects}
+{{- range $i, $proj := .Projects}}
+{{- if lt $i 6}}
+\textbf{ {{- $proj.Title -}} }{{- if $proj.Technologies.Languages}} -- \textit{ {{- join $proj.Technologies.Languages ", " -}} }{{end}}
+
+{{$proj.Content}}
+{{- if ne $i 5}}
+
+\medskip
+{{- end}}
+{{- end}}
+{{- end}}
+
+\medskip
+
+\vfill
+
+{\footnotesize {{.Consent}}}
 
 \end{document}

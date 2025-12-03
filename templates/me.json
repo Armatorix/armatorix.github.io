@@ -5,7 +5,7 @@
         "location": "Zębowice, Poland",
         "email": "sokolwojtek1@gmail.com",
         "phone": "+48 725 205 367",
-        "website": "https://me.wsokol.dev/",
+        "website": "me.wsokol.dev",
         "degree": "Bachelor of Engineering in Computer Science",
         "freelance": "Available",
         "description": "I don't believe that there are unsolvable tasks - sometimes they require more time.",
@@ -121,6 +121,22 @@
         }
     ],
     "experience": [
+        {
+            "company": "epole.farm",
+            "location": "Zębowice, Poland",
+            "position": "All in one",
+            "period": "Apr. 2020 - Present",
+            "projects": [
+                {
+                    "name": "Farm management",
+                    "technologies": ["Go", "React", "PostgresDB", "Docker", "fly.io"],
+                    "responsibilities": [
+                        "Creating web app for farm management from scratch"
+                    ]
+                }
+            ]
+
+        },
         {
             "company": "rift",
             "location": "Remote",

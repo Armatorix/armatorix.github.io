@@ -147,6 +147,8 @@ func (m *Me) rebuildLatex() {
 				return len(v)
 			case []Education:
 				return len(v)
+			case []Project:
+				return len(v)
 			default:
 				return 0
 			}
@@ -154,6 +156,9 @@ func (m *Me) rebuildLatex() {
 		"newlineSentences": func(text string) string {
 			// Replace ". " with ".\\n" for LaTeX line breaks
 			return strings.ReplaceAll(text, ". ", ".\\\\\n")
+		},
+		"join": func(arr []string, sep string) string {
+			return strings.Join(arr, sep)
 		},
 	}).ParseFiles("./templates/main.tex.tpl")
 	if err != nil {
