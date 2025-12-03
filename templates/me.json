@@ -1,53 +1,409 @@
 {
+    "personal": {
+        "name": "Wojciech Sokołowski",
+        "title": "golang software engineer",
+        "location": "Zębowice, Poland",
+        "email": "sokolwojtek1@gmail.com",
+        "phone": "+48 725 205 367",
+        "website": "https://me.wsokol.dev/",
+        "degree": "Bachelor of Engineering in Computer Science",
+        "freelance": "Available",
+        "description": "I don't believe that there are unsolvable tasks - sometimes they require more time.",
+        "focus": "IT and farming"
+    },
+    "social": [
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/Armatorix",
+            "icon": "bi bi-linkedin",
+            "title": "linkedin.com"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/Armatorix",
+            "icon": "bi bi-github",
+            "title": "github.com"
+        },
+        {
+            "name": "StackOverflow",
+            "url": "https://stackoverflow.com/users/6107031/armatorix",
+            "icon": "ri-stack-overflow-line",
+            "title": "stackoverflow.com"
+        },
+        {
+            "name": "HackerRank",
+            "url": "https://www.hackerrank.com/sokolwojtek1",
+            "iconImage": "./assets/img/hackerrank.png",
+            "iconHeight": "18px",
+            "title": "hackerrank.com"
+        },
+        {
+            "name": "Codewars",
+            "url": "https://www.codewars.com/users/Armatorix",
+            "iconImage": "./assets/img/codewars.svg",
+            "iconHeight": "18px",
+            "title": "codewars.com"
+        },
+        {
+            "name": "PicoCTF",
+            "url": "https://play.picoctf.org/users/armatorix",
+            "iconImage": "./assets/img/picoctf.svg",
+            "iconHeight": "18px",
+            "title": "picoctf.org",
+            "iconStyle": "margin-left: -17px; margin-right: -17px;"
+        },
+        {
+            "name": "Chess.com",
+            "url": "https://www.chess.com/member/armatorix",
+            "iconImage": "./assets/img/chesscom.png",
+            "iconHeight": "18px",
+            "title": "chess.com"
+        },
+        {
+            "name": "Slack Gophers",
+            "username": "armatorix",
+            "url": "https://gophers.slack.com/",
+            "icon": "fa-slack"
+        }
+    ],
+    "summary": {
+        "description": "Had been solving the encountered problems for 3+ years. Used to program almost everything in C while studying. Favourite languages: Golang, C, Prolog, Python (in descending order). Daily using VS Code + Windows (WSL2), previously Ubuntu user (14.04-20.04). Love to have consistency across stacks and up-to-date systems. In free time playing Chess, solving algorithm problems on Codeforces (previously Codewars and Hackerrank).",
+        "favorite_languages": ["Golang", "C", "Prolog", "Python"]
+    },
+    "interests": [
+        {
+            "name": "Farming",
+            "icon": "ri-plant-line"
+        },
+        {
+            "name": "Coding challenges",
+            "icon": "ri-file-code-line"
+        },
+        {
+            "name": "Windsurfing",
+            "icon": "ri-windy-line"
+        },
+        {
+            "name": "Chess",
+            "icon": "ri-artboard-2-line"
+        }
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "level": "intermediate"
+        },
+        {
+            "name": "Polish",
+            "level": "native"
+        }
+    ],
+    "education": [
+        
+        {
+            "institution": "Centrum Kształcenia Rolniczego w Mokrzeszowie",
+            "degree": "Agricultural qualifications",
+            "period": "2019 - 2020"
+        },
+        {
+            "institution": "Wrocław University of Science and Technology",
+            "degree": "Bachelor of Engineering in Computer Science",
+            "faculty": "Faculty of Fundamental Problems of Technology",
+            "period": "2014 - 2018",
+            "thesis": {
+                "topic": "Position Based Messenger",
+                "technologies": ["Java", "NodeJS", "Express", "MongoDB"],
+                "description": "Frontend: Java - Android mobile app, Backend: NodeJS, Express, MongoDB"
+            }
+        }
+    ],
+    "experience": [
+        {
+            "company": "rift",
+            "location": "Remote",
+            "position": "Senior Backend Engineer",
+            "period": "Mar. 2023 - now",
+            "projects": [
+                {
+                    "name": "Scheduling",
+                    "technologies": ["Go", "React"],
+                    "responsibilities": [
+                        "Providing platform core - scheduling algorithm",
+                        "Working as full-stack: frontend, backend and ops"
+                    ]
+                },
+                {
+                    "name": "Platform",
+                    "technologies": ["Go", "React"],
+                    "responsibilities": [
+                        "Providing limits-friendly integrations with Hubspot/Salesforce/Zapier",
+                        "Provide app deployment in GKE cluster",
+                        "Setup Caddy as custom loadbalancer"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Smallpdf",
+            "location": "Remote",
+            "position": "Senior Backend Engineer",
+            "period": "Feb. 2022 - Mar. 2023",
+            "projects": [
+                {
+                    "name": "eSign tool",
+                    "technologies": ["Go"],
+                    "responsibilities": [
+                        "Introducing Golang best practices",
+                        "Providing eventsourcing based service",
+                        "Introducing Datadog tracing and service monitoring"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "IQVIA",
+            "location": "Remote",
+            "position": "Software Developer",
+            "period": "Jun. 2021 - Jul. 2021",
+            "projects": [
+                {
+                    "name": "NDA",
+                    "technologies": ["Go"],
+                    "responsibilities": [
+                        "Fixing golang repositories",
+                        "Adding coding standards with golangci-lint in gitlab pipelines",
+                        "Working on elasticsearch based service",
+                        "Doing security upgrades",
+                        "Introducing application monitoring"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Nomtek",
+            "location": "Remote/Wrocław, Poland",
+            "position": "Software Developer",
+            "period": "Oct. 2019 - Jun. 2021",
+            "projects": [
+                {
+                    "name": "NDA",
+                    "technologies": ["Go", "Java", "Python", "Bash", "Chef", "Terraform"],
+                    "responsibilities": [
+                        "Develop Golang: REST APIs, data processors, job scripts, mobile push service",
+                        "Develop Java: data importer, REST APIs",
+                        "Develop Python: data logs analyzer/processor based on Datadog API",
+                        "Using AWS services: Lambda, EC2 boxes, Fargate, Batch, SNS, SQS, S3",
+                        "Integrating login with Apple in Golang service",
+                        "Maintain Scylla cluster",
+                        "Improve monitoring (tracing, logging, metrics, alerts)",
+                        "Maintain stack with Chef and infrastructure with Terraform",
+                        "Improve database indexes and queries with performance upgrades of 4x",
+                        "Provide on-call service",
+                        "Work in multi-timezone/multicultural environment"
+                    ],
+                    "databases": ["Scylla", "MySQL"],
+                    "cloud": "AWS",
+                    "tools": ["DataDog"]
+                }
+            ]
+        },
+        {
+            "company": "Opera Software AS",
+            "location": "Remote/Wrocław, Poland",
+            "position": "Software Developer",
+            "period": "Jun. 2018 - Oct. 2019",
+            "projects": [
+                {
+                    "name": "VPN",
+                    "url": "https://www.opera.com/computer/features/free-vpn",
+                    "technologies": ["Go", "Python"],
+                    "responsibilities": [
+                        "Develop Golang: security and performance patches to VPN, caching library",
+                        "Develop Python: deployment tools",
+                        "Investigating security/performance/networking incidents",
+                        "Doing system and cluster upgrades with service 0-downtime",
+                        "Data analyzing and improving Linux system/network performance",
+                        "Maintain Docker swarm cluster"
+                    ],
+                    "tools": ["Docker", "Ansible", "Docker Swarm"]
+                },
+                {
+                    "name": "Monitoring and alerting system",
+                    "technologies": ["Bash"],
+                    "responsibilities": [
+                        "Bootstrap Prometheus based alert system for company services",
+                        "Providing CI/CD gitlab integration for deployment in multiple environments",
+                        "Integrating monitoring with company services",
+                        "Tutoring other employees on alert creations"
+                    ],
+                    "tools": ["Docker", "Ansible", "Grafana", "Prometheus", "Alertmanager"]
+                }
+            ]
+        },
+        {
+            "company": "Intel Corporation",
+            "location": "Gdańsk, Poland",
+            "position": "Software Developer Intern in Cloud Computing",
+            "period": "Jul. 2017 - Sep. 2017",
+            "projects": [
+                {
+                    "name": "Dmidecode plugin",
+                    "technologies": ["Go"],
+                    "responsibilities": [
+                        "Develop Golang: dmidecode plugin based on dmidecode tool"
+                    ]
+                },
+                {
+                    "name": "Snap metric catalog",
+                    "technologies": ["Python"],
+                    "responsibilities": [
+                        "Develop Python: Github repos parser and data processor",
+                        "Leading a 3-person project"
+                    ],
+                    "tools": ["Docker"]
+                },
+                {
+                    "name": "Snap Telemetry",
+                    "url": "https://github.com/intelsdi-x/snap",
+                    "technologies": ["Python", "Go", "Bash"],
+                    "responsibilities": [
+                        "Develop Golang: integration and unit tests, patching bugs",
+                        "Testing plugins on various Linux distributions"
+                    ],
+                    "tools": ["Docker"]
+                }
+            ]
+        }
+    ],
     "projects": [
+        {
+            "icon": "ri-history-line",
+            "url": "https://github.com/Armatorix/GoRetro",
+            "title": "GoRetro",
+            "content": "Simple agile sprint retrospective tool.",
+            "technologies": {
+                "languages": ["Go", "React"]
+            }
+        },
+        {
+            "icon": "ri-markdown-line",
+            "url": "https://github.com/Armatorix/GoPress",
+            "title": "GoPress",
+            "content": "Lightweight WordPress alternative. Supports markdown files as input and HTML templates. Created for personal usage to generate this website.",
+            "technologies": {
+                "languages": ["Go"]
+            }
+        },
+        {
+            "icon": "ri-line-chart-line",
+            "url": "https://ai-mma.dev/",
+            "title": "AI MMA",
+            "content": "Service with ML predictions for MMA fights. Co-created with Data Scientists",
+            "technologies": {
+                "languages": ["React", "Go"],
+                "cloud": "Fly.io"
+            }
+        },
+        {
+            "icon": "ri-numbers-fill",
+            "url": "https://github.com/Armatorix/smallpaf",
+            "title": "SmallPAF (Planning Async Format)",
+            "content": "Tool for async ticket estimations",
+            "technologies": {
+                "languages": ["React", "Go"],
+                "cloud": "Fly.io"
+            }
+        },
+        {
+            "icon": "bx bx-volume-full",
+            "url": "https://github.com/Armatorix/hearing",
+            "title": "Hearing app",
+            "content": "Simple tool that helps verify frequency range of hearing",
+            "technologies": {
+                "languages": ["React"],
+                "cloud": "Fly.io"
+            }
+        },
         {
             "icon": "ri-line-chart-line",
             "url": "https://github.com/Armatorix/OBSOverlays",
-            "title": "Chess.com livestats",
-            "content": "Simple service with users live stats for OBS usage written with HTML, Bootstrap and jQuery.",
+            "title": "Chess.com updater",
+            "content": "Simple service with users live stats for OBS usage",
             "technologies": {
-                "languages": [],
-                "management": [],
-                "databases": [],
-                "cloud": "",
-                "other": []
+                "languages": ["HTML", "jQuery"],
+                "cloud": "Heroku"
             }
         },
         {
             "icon": "bx bx-file",
             "url": "#",
             "title": "Wagapp",
-            "content": "Web app for storing car weight measurements. Hosted on GCP. Written with Golang and React.js with Auth0 authentication."
+            "content": "Web app for car weight. Project hosted on Cloud Run. Simple CRUD, integrated with przelewy24.pl and Auth0",
+            "technologies": {
+                "languages": ["React", "Go"],
+                "databases": ["PostgresDB"],
+                "management": ["Docker compose"],
+                "cloud": "GCP"
+            }
+        },
+        {
+            "icon": "ri-raspberry-pi-line",
+            "url": "https://github.com/Armatorix/WeatherSystem",
+            "title": "Temperature monitoring system",
+            "content": "Wireless temperature monitoring with Raspberry Pi and ESP8266+BME280. Prometheus with Pushgateway as main services",
+            "technologies": {
+                "languages": ["C"],
+                "management": ["Docker compose", "Ansible"],
+                "other": ["Prometheus", "Grafana"]
+            }
+        },
+        {
+            "icon": "bx bx-code-block",
+            "url": "https://github.com/Armatorix",
+            "title": "Simple imperative language compilers",
+            "content": "University project of compiler that generates machine code. First that I created was 4th in terms of performance on the yearbook. Wrote already 4 of them for different specifications",
+            "technologies": {
+                "languages": ["C", "Flex", "Bison"]
+            }
         },
         {
             "icon": "ri-link",
             "url": "https://github.com/Armatorix/BitLyke",
             "title": "Bitlyke",
-            "content": "Bit.ly like URL shortener hosted on Heroku. Written in Golang."
+            "content": "Bit.ly like URL shortener hosted on Heroku. Written in Golang.",
+            "technologies": {
+                "languages": ["Go"],
+                "cloud": "Heroku"
+            }
         },
         {
             "icon": "ri-slack-line",
             "url": "https://github.com/Armatorix/SlackUp",
             "title": "SlackUp",
-            "content": "Slack report generator for your own developer convenience."
+            "content": "Slack report generator for your own developer convenience.",
+            "technologies": {
+                "languages": ["Go"]
+            }
         },
         {
             "icon": "ri-discord-line",
             "url": "https://github.com/Armatorix/discordbot-ramen",
             "title": "Discord bot",
-            "content": "Python bot for spamming random google search images when using keywords. Hosted on heroku."
-        },
-        {
-            "icon": "ri-numbers-fill",
-            "url": "https://github.com/Armatorix/smallpaf",
-            "title": "SmallPAF",
-            "content": "Service for asynchronous JIRA estimations. Uses integrations with JIRA and simple email-based authentication. Deployed at https://smallpaf.fly.dev/."
+            "content": "Python bot for spamming random google search images when using keywords. Hosted on heroku.",
+            "technologies": {
+                "languages": ["Python"],
+                "cloud": "Heroku"
+            }
         },
         {
             "icon": "ri-html5-fill",
             "url": "https://github.com/Armatorix/jh",
             "title": "JH",
-            "content": "JQ like CLI tool for HTML except JSON. Crafted for personal usage."
+            "content": "JQ like CLI tool for HTML except JSON. Crafted for personal usage.",
+            "technologies": {
+                "languages": ["Go"]
+            }
         }
-    ]
-}  
+    ],
+    "consent": "I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the Personal Data Protection Act as of 29 August 1997, consolidated text: Journal of Laws 2016, item 922 as amended."
+}
