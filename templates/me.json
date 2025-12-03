@@ -58,12 +58,6 @@
             "iconImage": "./assets/img/chesscom.png",
             "iconHeight": "18px",
             "title": "chess.com"
-        },
-        {
-            "name": "Slack Gophers",
-            "username": "armatorix",
-            "url": "https://gophers.slack.com/",
-            "icon": "fa-slack"
         }
     ],
     "summary": {
@@ -359,7 +353,7 @@
         },
         {
             "icon": "bx bx-code-block",
-            "url": "https://github.com/Armatorix",
+            "url": "#",
             "title": "Simple imperative language compilers",
             "content": "University project of compiler that generates machine code. First that I created was 4th in terms of performance on the yearbook. Wrote already 4 of them for different specifications",
             "technologies": {
