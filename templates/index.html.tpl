@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>WS GODev</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <title>WS GODev | Cybersecurity & Golang</title>
+    <meta content="Wojciech Sokołowski - Golang Software Engineer & Problem Solver" name="description">
+    <meta content="golang, software engineer, cybersecurity, developer, backend" name="keywords">
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="assets/img/ico.png">
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
@@ -34,7 +34,7 @@
         <div class="container">
 
             <h1><a href="index.html">Wojciech Sokołowski</a></h1>
-            <h2>I'm a <span>golang software engineer</span> from Poland</h2>
+            <h2>I'm a <span class="typed-text">golang software engineer</span> from Poland</h2>
 
             <nav id="navbar" class="navbar">
                 <ul>
@@ -62,7 +62,8 @@
                 <a href="https://www.codewars.com/users/Armatorix" class="codewars" data-toggle="tooltip"
                     data-placement="top" title="codewars.com"><img src="./assets/img/codewars.svg" height="18px"></a>
                 <a href="https://play.picoctf.org/users/armatorix" class="picoctf" data-toggle="tooltip"
-                    data-placement="top" title="picoctf.org"><img src="./assets/img/picoctf.svg" height="18px"></a>
+                    data-placement="top" title="picoctf.org"><img src="./assets/img/picoctf.svg" height="18px"
+                        style="margin-left: -17px; margin-right: -17px;"></a>
                 <a href="https://www.chess.com/member/armatorix" class="chesscom" data-toggle="tooltip"
                     data-placement="top" title="chess.com"><img src="./assets/img/chesscom.png" height="18px"></a>
             </div>
@@ -436,7 +437,7 @@
                 <p>My projects</p>
             </div>
             <div class="row">
-{{range $i, $p := .Projects}}
+                {{range $i, $p := .Projects}}
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <a href="{{$p.URL}}">
                         <div class="icon-box">
@@ -446,12 +447,12 @@
                         </div>
                     </a>
                 </div>
-    {{if splitp $i}}
+                {{if splitp $i}}
             </div>
             <div class="row">
-    {{end}}
-{{end}}
-            </div>  
+                {{end}}
+                {{end}}
+            </div>
         </div>
     </section><!-- End Services Section -->
 
@@ -505,8 +506,7 @@
     </section><!-- End Contact Section -->
 
     <div class="credits">
-        Template by <a href="https://bootstrapmade.com/">BootstrapMade</a> background based on <a
-            href="https://github.com/emilyxxie/green_rain">emilyxxie</a>
+        background based on <a href="https://github.com/emilyxxie/green_rain">emilyxxie</a>
     </div>
 
     <!-- Vendor JS Files -->
