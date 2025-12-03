@@ -137,12 +137,30 @@ func (m *Me) rebuildHTML() {
 }
 
 func (m *Me) rebuildLatex() {
-	t, err := template.New("tex").ParseFiles("./templates/main.tex.tpl")
+	t, err := template.New("tex").Funcs(template.FuncMap{
+		"sub": func(a, b int) int {
+			return a - b
+		},
+		"len": func(slice interface{}) int {
+			switch v := slice.(type) {
+			case []Experience:
+				return len(v)
+			case []Education:
+				return len(v)
+			default:
+				return 0
+			}
+		},
+		"newlineSentences": func(text string) string {
+			// Replace ". " with ".\\n" for LaTeX line breaks
+			return strings.ReplaceAll(text, ". ", ".\\\\\n")
+		},
+	}).ParseFiles("./templates/main.tex.tpl")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	f, err := os.OpenFile("main.tex", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+	f, err := os.OpenFile("./texassets/main.tex", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 	if err != nil {
 		log.Fatal(err)
 	}
