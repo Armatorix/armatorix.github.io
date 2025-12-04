@@ -45,8 +45,9 @@
                     <li><a class="nav-link" href="#projects">Projects</a></li>
                     <li><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
+            
+            <i class="bi bi-list mobile-nav-toggle"></i>
 
             <div class="social-links">
                 {{range .Social}}
