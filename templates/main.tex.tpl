@@ -65,6 +65,9 @@
   {{- range .Social}}{{if eq .Name "Codewars"}}
   \printinfo{\faCode}{ {{- .Title -}} }[{{.URL}}]
   {{- end}}{{end}}
+  {{- range .Social}}{{if eq .Name "Thingiverse"}}
+  \printinfo{\faCube}{ {{- .Title -}} }[{{.URL}}]
+  {{- end}}{{end}}
 }
 
 \makecvheader

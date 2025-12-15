@@ -67,6 +67,13 @@
             "iconImage": "./assets/img/chesscom.png",
             "iconHeight": "18px",
             "title": "chess.com"
+        },
+        {
+            "name": "Thingiverse",
+            "url": "https://www.thingiverse.com/Armatorix",
+            "iconImage": "./assets/img/thingiverse.png",
+            "iconHeight": "18px",
+            "title": "thingiverse.com"
         }
     ],
     "summary": {
