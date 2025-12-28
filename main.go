@@ -110,9 +110,6 @@ type Me struct {
 
 func (m *Me) rebuildHTML() {
 	t, err := template.New("html").Funcs(template.FuncMap{
-		"splitp": func(i int) bool {
-			return i != 0 && i != len(m.Projects)-1 && (i+1)%3 == 0
-		},
 		"lower": func(s string) string {
 			return strings.ToLower(s)
 		},
@@ -179,6 +176,7 @@ func (m *Me) rebuildLatex() {
 		log.Fatal(err)
 	}
 }
+
 func main() {
 	meJSON, err := ioutil.ReadFile("./templates/me.json")
 	if err != nil {

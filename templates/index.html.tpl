@@ -231,10 +231,6 @@
                         </div>
                     </a>
                 </div>
-                {{if splitp $i}}
-            </div>
-            <div class="row">
-                {{end}}
                 {{end}}
             </div>
         </div>

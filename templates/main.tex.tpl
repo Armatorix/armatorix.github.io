@@ -156,6 +156,8 @@
 
 \end{paracol}
 
+\pagebreak
+
 \cvsection{Projects}
 {{- range $i, $proj := .Projects}}
 {{- if lt $i 6}}
