@@ -136,9 +136,12 @@
             "projects": [
                 {
                     "name": "Farm management",
-                    "technologies": ["Go", "React", "PostgresDB", "Docker", "fly.io"],
+                    "technologies": ["Go", "React"],
+                    "databases": ["PostgresDB"],
+                    "cloud": "fly.io",
+                    "tools": ["Docker"],
                     "responsibilities": [
-                        "Creating web app for farm management from scratch"
+                        "Creating web app for farm management from scratch as a free to use platform"
                     ]
                 }
             ]
@@ -152,6 +155,8 @@
             "projects": [
                 {
                     "name": "Crop production",
+                    "technologies": ["integrated production"],
+                    "tools": ["JD tractors :D"],
                     "responsibilities": [
                         "Staring Integrated Production in crops",
                         "Using modern technologies in farming",
@@ -177,10 +182,13 @@
                 {
                     "name": "Platform",
                     "technologies": ["Go", "React"],
+                    "databases": ["PostgresDB", "Redis"],
+                    "tools": ["DataDog", "Kubernetes", "GKE", "Terraform"],
+                    "cloud": "GCP",
                     "responsibilities": [
                         "Providing limits-friendly integrations with Hubspot/Salesforce/Zapier",
                         "Provide app deployment in GKE cluster",
-                        "Setup Caddy as custom loadbalancer"
+                        "Setup Caddy as custom loadbalancer with automatic SSL"
                     ]
                 }
             ]
@@ -194,10 +202,13 @@
                 {
                     "name": "eSign tool",
                     "technologies": ["Go"],
+                    "databases": ["PostgresDB", "Redis"],
+                    "tools": ["DataDog", "Kubernetes", "AWS S3", "Terraform"],
+                    "cloud": "AWS",
                     "responsibilities": [
                         "Introducing Golang best practices",
                         "Providing eventsourcing based service",
-                        "Introducing Datadog tracing and service monitoring"
+                        "Introducing DataDog tracing and service monitoring"
                     ]
                 }
             ]
@@ -211,6 +222,8 @@
                 {
                     "name": "NDA",
                     "technologies": ["Go"],
+                    "databases": ["Elasticsearch"],
+                    "tools": ["DataDog"],
                     "responsibilities": [
                         "Fixing golang repositories",
                         "Adding coding standards with golangci-lint in gitlab pipelines",
@@ -243,7 +256,7 @@
                         "Provide on-call service",
                         "Work in multi-timezone/multicultural environment"
                     ],
-                    "databases": ["Scylla", "MySQL"],
+                    "databases": ["Scylla", "Aurora/MySQL", "DynamoDB"],
                     "cloud": "AWS",
                     "tools": ["DataDog"]
                 }
@@ -322,7 +335,7 @@
             "icon": "ri-history-line",
             "url": "https://github.com/Armatorix/GoRetro",
             "title": "GoRetro",
-            "content": "Simple agile sprint retrospective tool.",
+            "content": "Simple agile sprint retrospective. Built to be used with oauth proxy.",
             "technologies": {
                 "languages": ["Go", "React"]
             }
