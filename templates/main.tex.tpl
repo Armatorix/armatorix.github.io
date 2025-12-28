@@ -118,41 +118,11 @@
 {{- end}}
 
 
-\cvsubsection{Cloud \& DevOps}
-\cvtag{AWS}
-\cvtag{GCP}
-\cvtag{Docker}
-\cvtag{Kubernetes}
-\cvtag{Terraform}
-\cvtag{Ansible}
-\cvtag{Chef}
-
-\medskip
-
-\cvsubsection{Databases}
-\cvtag{Scylla}
-\cvtag{MySQL}
-\cvtag{PostgreSQL}
-\cvtag{MongoDB}
-\cvtag{Elasticsearch}
-
-\medskip
-
-\cvsubsection{Tools}
-\cvtag{DataDog}
-\cvtag{Prometheus}
-\cvtag{Grafana}
-\cvtag{Docker Swarm}
-
 \cvsection{Languages}
 {{- range .Languages}}
 {{.Name}}: {{.Level}}\\
 {{- end}}
 
-\cvsection{Interests}
-{{- range .Interests}}
-\cvtag{ {{- .Name -}} }
-{{- end}}
 
 \end{paracol}
 
@@ -160,8 +130,7 @@
 
 \cvsection{Projects}
 {{- range $i, $proj := .Projects}}
-{{- if lt $i 6}}
-\textbf{ {{- $proj.Title -}} }{{- if $proj.Technologies.Languages}} -- \textit{ {{- join $proj.Technologies.Languages ", " -}} }{{end}}
+\textbf{ {{- $proj.Title -}} }{{- if $proj.Technologies.Languages}} -- \textit{ {{- join $proj.Technologies.Languages ", " -}} }
 
 {{$proj.Content}}
 {{- if ne $i 5}}

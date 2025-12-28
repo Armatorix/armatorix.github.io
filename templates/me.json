@@ -77,7 +77,7 @@
         }
     ],
     "summary": {
-        "description": "Had been solving the encountered problems for 3+ years. Used to program almost everything in C while studying. Favourite languages: Golang, C, Prolog, Python (in descending order). Daily using VS Code + Windows (WSL2), previously Ubuntu user (14.04-20.04). Love to have consistency across stacks and up-to-date systems. In free time playing Chess, solving algorithm problems on Codeforces (previously Codewars and Hackerrank).",
+        "description": "Favourite languages: Golang, C, Prolog, Python (in descending order). Daily using VS Code + Windows (WSL2), previously Ubuntu user (14.04-20.04). Love to have consistency across stacks and up-to-date systems. Enjoy working on both backend and frontend. Interested in distributed systems, cloud computing, databases, networking and system programming. Passionate about farming and modern agriculture technologies.",
         "favorite_languages": ["Golang", "C", "Prolog", "Python"]
     },
     "interests": [
@@ -435,7 +435,7 @@
             "icon": "ri-slack-line",
             "url": "https://github.com/Armatorix/SlackUp",
             "title": "SlackUp",
-            "content": "Slack report generator for your own developer convenience.",
+            "content": "Slack report generator. Generates daily reports with random work and progress.",
             "technologies": {
                 "languages": ["Go"]
             }
