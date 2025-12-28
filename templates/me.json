@@ -393,7 +393,7 @@
             "icon": "bx bx-file",
             "url": "#",
             "title": "Wagapp",
-            "content": "Web app for car weight. Project hosted on Cloud Run. Simple CRUD, integrated with przelewy24.pl and Auth0",
+            "content": "Web app for car weight. Simple CRUD, integrated with przelewy24.pl and Auth0",
             "technologies": {
                 "languages": ["React", "Go"],
                 "databases": ["PostgresDB"],
@@ -416,7 +416,7 @@
             "icon": "bx bx-code-block",
             "url": "#",
             "title": "Simple imperative language compilers",
-            "content": "University project of compiler that generates machine code. First that I created was 4th in terms of performance on the yearbook. Wrote already 4 of them for different specifications",
+            "content": "University project of compiler that generates machine code. First created was 4th in terms of performance on the yearbook. Wrote already 4 of them based on different specifications",
             "technologies": {
                 "languages": ["C", "Flex", "Bison"]
             }
@@ -425,7 +425,7 @@
             "icon": "ri-link",
             "url": "https://github.com/Armatorix/BitLyke",
             "title": "Bitlyke",
-            "content": "Bit.ly like URL shortener hosted on Heroku. Written in Golang.",
+            "content": "Bit.ly like URL shortener.",
             "technologies": {
                 "languages": ["Go"],
                 "cloud": "Heroku"
@@ -444,7 +444,7 @@
             "icon": "ri-discord-line",
             "url": "https://github.com/Armatorix/discordbot-ramen",
             "title": "Discord bot",
-            "content": "Python bot for spamming random google search images when using keywords. Hosted on heroku.",
+            "content": "Python bot for spamming random google search images when using keywords.",
             "technologies": {
                 "languages": ["Python"],
                 "cloud": "Heroku"
