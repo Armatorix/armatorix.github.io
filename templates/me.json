@@ -78,7 +78,12 @@
     ],
     "summary": {
         "description": "Favourite languages: Golang, C, Prolog, Python (in descending order). Daily using VS Code + Windows (WSL2), previously Ubuntu user (14.04-20.04). Love to have consistency across stacks and up-to-date systems. Enjoy working on both backend and frontend. Interested in distributed systems and performance optimization. Passionate about farming and modern agriculture technologies.",
-        "favorite_languages": ["Golang", "C", "Prolog", "Python"]
+        "favorite_languages": [
+            "Golang",
+            "C",
+            "Prolog",
+            "Python"
+        ]
     },
     "interests": [
         {
@@ -109,7 +114,6 @@
         }
     ],
     "education": [
-        
         {
             "institution": "Centrum Kształcenia Rolniczego w Mokrzeszowie",
             "degree": "Agricultural qualifications",
@@ -122,7 +126,12 @@
             "period": "2014 - 2018",
             "thesis": {
                 "topic": "Position Based Messenger",
-                "technologies": ["Java", "NodeJS", "Express", "MongoDB"],
+                "technologies": [
+                    "Java",
+                    "NodeJS",
+                    "Express",
+                    "MongoDB"
+                ],
                 "description": "Frontend: Java - Android mobile app, Backend: NodeJS, Express, MongoDB"
             }
         }
@@ -136,16 +145,22 @@
             "projects": [
                 {
                     "name": "Farm management",
-                    "technologies": ["Go", "React"],
-                    "databases": ["PostgresDB"],
+                    "technologies": [
+                        "Go",
+                        "React"
+                    ],
+                    "databases": [
+                        "PostgresDB"
+                    ],
                     "cloud": "fly.io",
-                    "tools": ["Docker"],
+                    "tools": [
+                        "Docker"
+                    ],
                     "responsibilities": [
                         "Creating web app for farm management from scratch as a free to use platform"
                     ]
                 }
             ]
-
         },
         {
             "company": "Family farming",
@@ -155,8 +170,12 @@
             "projects": [
                 {
                     "name": "Crop production",
-                    "technologies": ["integrated production"],
-                    "tools": ["JD tractors :D"],
+                    "technologies": [
+                        "integrated production"
+                    ],
+                    "tools": [
+                        "JD tractors :D"
+                    ],
                     "responsibilities": [
                         "Staring Integrated Production in crops",
                         "Using modern technologies in farming",
@@ -173,7 +192,10 @@
             "projects": [
                 {
                     "name": "Scheduling",
-                    "technologies": ["Go", "React"],
+                    "technologies": [
+                        "Go",
+                        "React"
+                    ],
                     "responsibilities": [
                         "Providing platform core - scheduling algorithm",
                         "Working as full-stack: frontend, backend and ops"
@@ -181,9 +203,20 @@
                 },
                 {
                     "name": "Platform",
-                    "technologies": ["Go", "React"],
-                    "databases": ["PostgresDB", "Redis"],
-                    "tools": ["DataDog", "Kubernetes", "GKE", "Terraform"],
+                    "technologies": [
+                        "Go",
+                        "React"
+                    ],
+                    "databases": [
+                        "PostgresDB",
+                        "Redis"
+                    ],
+                    "tools": [
+                        "DataDog",
+                        "Kubernetes",
+                        "GKE",
+                        "Terraform"
+                    ],
                     "cloud": "GCP",
                     "responsibilities": [
                         "Providing limits-friendly integrations with Hubspot/Salesforce/Zapier",
@@ -201,9 +234,19 @@
             "projects": [
                 {
                     "name": "eSign tool",
-                    "technologies": ["Go"],
-                    "databases": ["PostgresDB", "Redis"],
-                    "tools": ["DataDog", "Kubernetes", "AWS S3", "Terraform"],
+                    "technologies": [
+                        "Go"
+                    ],
+                    "databases": [
+                        "PostgresDB",
+                        "Redis"
+                    ],
+                    "tools": [
+                        "DataDog",
+                        "Kubernetes",
+                        "AWS S3",
+                        "Terraform"
+                    ],
                     "cloud": "AWS",
                     "responsibilities": [
                         "Introducing Golang best practices",
@@ -221,9 +264,15 @@
             "projects": [
                 {
                     "name": "NDA",
-                    "technologies": ["Go"],
-                    "databases": ["Elasticsearch"],
-                    "tools": ["DataDog"],
+                    "technologies": [
+                        "Go"
+                    ],
+                    "databases": [
+                        "Elasticsearch"
+                    ],
+                    "tools": [
+                        "DataDog"
+                    ],
                     "responsibilities": [
                         "Fixing golang repositories",
                         "Adding coding standards with golangci-lint in gitlab pipelines",
@@ -242,7 +291,14 @@
             "projects": [
                 {
                     "name": "NDA",
-                    "technologies": ["Go", "Java", "Python", "Bash", "Chef", "Terraform"],
+                    "technologies": [
+                        "Go",
+                        "Java",
+                        "Python",
+                        "Bash",
+                        "Chef",
+                        "Terraform"
+                    ],
                     "responsibilities": [
                         "Develop Golang: REST APIs, data processors, job scripts, mobile push service",
                         "Develop Java: data importer, REST APIs",
@@ -256,9 +312,15 @@
                         "Provide on-call service",
                         "Work in multi-timezone/multicultural environment"
                     ],
-                    "databases": ["Scylla", "Aurora/MySQL", "DynamoDB"],
+                    "databases": [
+                        "Scylla",
+                        "Aurora/MySQL",
+                        "DynamoDB"
+                    ],
                     "cloud": "AWS",
-                    "tools": ["DataDog"]
+                    "tools": [
+                        "DataDog"
+                    ]
                 }
             ]
         },
@@ -271,7 +333,10 @@
                 {
                     "name": "VPN",
                     "url": "https://www.opera.com/computer/features/free-vpn",
-                    "technologies": ["Go", "Python"],
+                    "technologies": [
+                        "Go",
+                        "Python"
+                    ],
                     "responsibilities": [
                         "Develop Golang: security and performance patches to VPN, caching library",
                         "Develop Python: deployment tools",
@@ -280,18 +345,30 @@
                         "Data analyzing and improving Linux system/network performance",
                         "Maintain Docker swarm cluster"
                     ],
-                    "tools": ["Docker", "Ansible", "Docker Swarm"]
+                    "tools": [
+                        "Docker",
+                        "Ansible",
+                        "Docker Swarm"
+                    ]
                 },
                 {
                     "name": "Monitoring and alerting system",
-                    "technologies": ["Bash"],
+                    "technologies": [
+                        "Bash"
+                    ],
                     "responsibilities": [
                         "Bootstrap Prometheus based alert system for company services",
                         "Providing CI/CD gitlab integration for deployment in multiple environments",
                         "Integrating monitoring with company services",
                         "Tutoring other employees on alert creations"
                     ],
-                    "tools": ["Docker", "Ansible", "Grafana", "Prometheus", "Alertmanager"]
+                    "tools": [
+                        "Docker",
+                        "Ansible",
+                        "Grafana",
+                        "Prometheus",
+                        "Alertmanager"
+                    ]
                 }
             ]
         },
@@ -303,29 +380,41 @@
             "projects": [
                 {
                     "name": "Dmidecode plugin",
-                    "technologies": ["Go"],
+                    "technologies": [
+                        "Go"
+                    ],
                     "responsibilities": [
                         "Develop Golang: dmidecode plugin based on dmidecode tool"
                     ]
                 },
                 {
                     "name": "Snap metric catalog",
-                    "technologies": ["Python"],
+                    "technologies": [
+                        "Python"
+                    ],
                     "responsibilities": [
                         "Develop Python: Github repos parser and data processor",
                         "Leading a 3-person project"
                     ],
-                    "tools": ["Docker"]
+                    "tools": [
+                        "Docker"
+                    ]
                 },
                 {
                     "name": "Snap Telemetry",
                     "url": "https://github.com/intelsdi-x/snap",
-                    "technologies": ["Python", "Go", "Bash"],
+                    "technologies": [
+                        "Python",
+                        "Go",
+                        "Bash"
+                    ],
                     "responsibilities": [
                         "Develop Golang: integration and unit tests, patching bugs",
                         "Testing plugins on various Linux distributions"
                     ],
-                    "tools": ["Docker"]
+                    "tools": [
+                        "Docker"
+                    ]
                 }
             ]
         }
@@ -337,7 +426,10 @@
             "title": "GoRetro",
             "content": "Simple agile sprint retrospective. Built to be used with oauth proxy.",
             "technologies": {
-                "languages": ["Go", "React"]
+                "languages": [
+                    "Go",
+                    "React"
+                ]
             }
         },
         {
@@ -346,7 +438,9 @@
             "title": "GoPress",
             "content": "Lightweight WordPress alternative. Supports markdown files as input and HTML templates. Created for personal usage to generate this website.",
             "technologies": {
-                "languages": ["Go"]
+                "languages": [
+                    "Go"
+                ]
             }
         },
         {
@@ -355,7 +449,10 @@
             "title": "AI MMA",
             "content": "Service with ML predictions for MMA fights. Co-created with Data Scientists",
             "technologies": {
-                "languages": ["React", "Go"],
+                "languages": [
+                    "React",
+                    "Go"
+                ],
                 "cloud": "Fly.io"
             }
         },
@@ -365,18 +462,23 @@
             "title": "SmallPAF (Planning Async Format)",
             "content": "Tool for async ticket estimations",
             "technologies": {
-                "languages": ["React", "Go"],
+                "languages": [
+                    "React",
+                    "Go"
+                ],
                 "cloud": "Fly.io"
             }
         },
         {
             "icon": "bx bx-volume-full",
-            "url": "https://github.com/Armatorix/hearing",
+            "url": "https://me.wsokol.dev/hearing",
             "title": "Hearing app",
             "content": "Simple tool that helps verify frequency range of hearing",
             "technologies": {
-                "languages": ["React"],
-                "cloud": "Fly.io"
+                "languages": [
+                    "React"
+                ],
+                "cloud": "Gh Pages"
             }
         },
         {
@@ -385,7 +487,10 @@
             "title": "Chess.com updater",
             "content": "Simple service with users live stats for OBS usage",
             "technologies": {
-                "languages": ["HTML", "jQuery"],
+                "languages": [
+                    "HTML",
+                    "jQuery"
+                ],
                 "cloud": "Heroku"
             }
         },
@@ -395,9 +500,16 @@
             "title": "Wagapp",
             "content": "Web app for car weight. Simple CRUD, integrated with przelewy24.pl and Auth0",
             "technologies": {
-                "languages": ["React", "Go"],
-                "databases": ["PostgresDB"],
-                "management": ["Docker compose"],
+                "languages": [
+                    "React",
+                    "Go"
+                ],
+                "databases": [
+                    "PostgresDB"
+                ],
+                "management": [
+                    "Docker compose"
+                ],
                 "cloud": "GCP"
             }
         },
@@ -407,9 +519,17 @@
             "title": "Temperature monitoring system",
             "content": "Wireless temperature monitoring with Raspberry Pi and ESP8266+BME280. Prometheus with Pushgateway as main services",
             "technologies": {
-                "languages": ["C"],
-                "management": ["Docker compose", "Ansible"],
-                "other": ["Prometheus", "Grafana"]
+                "languages": [
+                    "C"
+                ],
+                "management": [
+                    "Docker compose",
+                    "Ansible"
+                ],
+                "other": [
+                    "Prometheus",
+                    "Grafana"
+                ]
             }
         },
         {
@@ -418,7 +538,11 @@
             "title": "Simple imperative language compilers",
             "content": "University project of compiler that generates machine code. First created was 4th in terms of performance on the yearbook. Wrote already 4 of them based on different specifications",
             "technologies": {
-                "languages": ["C", "Flex", "Bison"]
+                "languages": [
+                    "C",
+                    "Flex",
+                    "Bison"
+                ]
             }
         },
         {
@@ -427,7 +551,9 @@
             "title": "Bitlyke",
             "content": "Bit.ly like URL shortener.",
             "technologies": {
-                "languages": ["Go"],
+                "languages": [
+                    "Go"
+                ],
                 "cloud": "Heroku"
             }
         },
@@ -437,7 +563,9 @@
             "title": "SlackUp",
             "content": "Slack report generator. Generates daily reports with random work and progress.",
             "technologies": {
-                "languages": ["Go"]
+                "languages": [
+                    "Go"
+                ]
             }
         },
         {
@@ -446,7 +574,9 @@
             "title": "Discord bot",
             "content": "Python bot for spamming random google search images when using keywords.",
             "technologies": {
-                "languages": ["Python"],
+                "languages": [
+                    "Python"
+                ],
                 "cloud": "Heroku"
             }
         },
@@ -456,7 +586,9 @@
             "title": "JH",
             "content": "JQ like CLI tool for HTML except JSON. Crafted for personal usage.",
             "technologies": {
-                "languages": ["Go"]
+                "languages": [
+                    "Go"
+                ]
             }
         }
     ],
