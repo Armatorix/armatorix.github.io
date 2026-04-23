@@ -6,8 +6,63 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>{{.Personal.Name}} | {{.Personal.Title}}</title>
-    <meta content="{{.Personal.Name}} - {{.Personal.Title}}" name="description">
-    <meta content="golang, software engineer, cybersecurity, developer, backend" name="keywords">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{{.Personal.Name}} | {{.Personal.Title}}">
+    <meta name="description" content="{{.Personal.Name}} - {{.Personal.Title}} based in {{.Personal.Location}}. {{.Personal.Description}}">
+    <meta name="keywords" content="{{.Personal.Name}}, Armatorix, golang, go developer, software engineer, solutions engineer, cybersecurity, backend developer, distributed systems, Poland">
+    <meta name="author" content="{{.Personal.Name}}">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://{{.Personal.Website}}/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://{{.Personal.Website}}/">
+    <meta property="og:title" content="{{.Personal.Name}} | {{.Personal.Title}}">
+    <meta property="og:description" content="{{.Personal.Name}} - {{.Personal.Title}} based in {{.Personal.Location}}. {{.Personal.Description}}">
+    <meta property="og:image" content="https://{{.Personal.Website}}/assets/img/me.jpg">
+    <meta property="og:image:alt" content="{{.Personal.Name}} - {{.Personal.Title}}">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:site_name" content="{{.Personal.Name}}">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://{{.Personal.Website}}/">
+    <meta name="twitter:title" content="{{.Personal.Name}} | {{.Personal.Title}}">
+    <meta name="twitter:description" content="{{.Personal.Name}} - {{.Personal.Title}} based in {{.Personal.Location}}. {{.Personal.Description}}">
+    <meta name="twitter:image" content="https://{{.Personal.Website}}/assets/img/me.jpg">
+    <meta name="twitter:image:alt" content="{{.Personal.Name}} - {{.Personal.Title}}">
+    {{range .Social}}{{if eq .Name "X"}}<meta name="twitter:creator" content="@{{.Username}}">
+    <meta name="twitter:site" content="@{{.Username}}">
+    {{end}}{{end}}
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{.Personal.Name}}",
+        "jobTitle": "{{.Personal.Title}}",
+        "description": "{{.Personal.Description}}",
+        "email": "mailto:{{.Personal.Email}}",
+        "telephone": "{{.Personal.Phone}}",
+        "url": "https://{{.Personal.Website}}/",
+        "image": "https://{{.Personal.Website}}/assets/img/me.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "{{.Personal.Location}}"
+        },
+        "sameAs": [{{range $i, $s := .Social}}{{if $i}},{{end}}
+            "{{$s.URL}}"{{end}}
+        ]
+    }
+    </script>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="assets/img/ico.png">
     <!-- Google Fonts -->
