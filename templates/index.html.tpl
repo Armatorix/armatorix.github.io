@@ -65,6 +65,15 @@
     </script>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="assets/img/ico.png">
+
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="assets/img/me.jpg" fetchpriority="high">
+
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
@@ -74,7 +83,6 @@
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
@@ -107,9 +115,9 @@
             <div class="social-links">
                 {{range .Social}}
                 {{if .Icon}}
-                <a href="{{.URL}}" class="{{.Name | lower}}" data-placement="top" title="{{.Title}}"><i class="{{.Icon}}"></i></a>
+                <a href="{{.URL}}" class="{{.Name | lower}}" data-placement="top" title="{{.Title}}" rel="noopener me" target="_blank"><i class="{{.Icon}}"></i></a>
                 {{else if .IconImage}}
-                <a href="{{.URL}}" class="{{.Name | lower}}" data-toggle="tooltip" data-placement="top" title="{{.Title}}"><img src="{{.IconImage}}" height="{{.IconHeight}}"{{if .IconStyle}} style="{{.IconStyle}}"{{end}}></a>
+                <a href="{{.URL}}" class="{{.Name | lower}}" data-toggle="tooltip" data-placement="top" title="{{.Title}}" rel="noopener me" target="_blank"><img src="{{.IconImage}}" height="{{.IconHeight}}" alt="{{.Title}}" loading="lazy" decoding="async"{{if .IconStyle}} style="{{.IconStyle}}"{{end}}></a>
                 {{end}}
                 {{end}}
             </div>
@@ -130,7 +138,7 @@
 
             <div class="row">
                 <div class="col-lg-4" data-aos="fade-right">
-                    <img src="assets/img/me.jpg" class="img-fluid" alt="">
+                    <img src="assets/img/me.jpg" class="img-fluid" alt="Portrait of {{.Personal.Name}}" width="2048" height="1536" fetchpriority="high" decoding="async">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                     <h3>Problem solver / Golang developer</h3>
@@ -344,18 +352,14 @@
     </section><!-- End Contact Section -->
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
-    <script src="assets/js/matrix.js"></script>
+    <!-- Matrix background effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js" defer></script>
+    <script src="assets/js/matrix.js" defer></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 
 </body>
 

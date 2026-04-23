@@ -73,6 +73,15 @@
     </script>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="assets/img/ico.png">
+
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="assets/img/me.jpg" fetchpriority="high">
+
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
@@ -82,7 +91,6 @@
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
@@ -115,39 +123,39 @@
             <div class="social-links">
                 
                 
-                <a href="https://x.com/Armatorix" class="x" data-placement="top" title="twitter.com"><i class="bi bi-twitter"></i></a>
+                <a href="https://x.com/Armatorix" class="x" data-placement="top" title="twitter.com" rel="noopener me" target="_blank"><i class="bi bi-twitter"></i></a>
                 
                 
                 
-                <a href="https://www.linkedin.com/in/Armatorix" class="linkedin" data-placement="top" title="linkedin.com"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/Armatorix" class="linkedin" data-placement="top" title="linkedin.com" rel="noopener me" target="_blank"><i class="bi bi-linkedin"></i></a>
                 
                 
                 
-                <a href="https://github.com/Armatorix" class="github" data-placement="top" title="github.com"><i class="bi bi-github"></i></a>
+                <a href="https://github.com/Armatorix" class="github" data-placement="top" title="github.com" rel="noopener me" target="_blank"><i class="bi bi-github"></i></a>
                 
                 
                 
-                <a href="https://stackoverflow.com/users/6107031/armatorix" class="stackoverflow" data-placement="top" title="stackoverflow.com"><i class="ri-stack-overflow-line"></i></a>
+                <a href="https://stackoverflow.com/users/6107031/armatorix" class="stackoverflow" data-placement="top" title="stackoverflow.com" rel="noopener me" target="_blank"><i class="ri-stack-overflow-line"></i></a>
                 
                 
                 
-                <a href="https://www.hackerrank.com/sokolwojtek1" class="hackerrank" data-toggle="tooltip" data-placement="top" title="hackerrank.com"><img src="./assets/img/hackerrank.png" height="18px"></a>
+                <a href="https://www.hackerrank.com/sokolwojtek1" class="hackerrank" data-toggle="tooltip" data-placement="top" title="hackerrank.com" rel="noopener me" target="_blank"><img src="./assets/img/hackerrank.png" height="18px" alt="hackerrank.com" loading="lazy" decoding="async"></a>
                 
                 
                 
-                <a href="https://www.codewars.com/users/Armatorix" class="codewars" data-toggle="tooltip" data-placement="top" title="codewars.com"><img src="./assets/img/codewars.svg" height="18px"></a>
+                <a href="https://www.codewars.com/users/Armatorix" class="codewars" data-toggle="tooltip" data-placement="top" title="codewars.com" rel="noopener me" target="_blank"><img src="./assets/img/codewars.svg" height="18px" alt="codewars.com" loading="lazy" decoding="async"></a>
                 
                 
                 
-                <a href="https://play.picoctf.org/users/armatorix" class="picoctf" data-toggle="tooltip" data-placement="top" title="picoctf.org"><img src="./assets/img/picoctf.svg" height="18px" style="margin-left: -17px; margin-right: -17px;"></a>
+                <a href="https://play.picoctf.org/users/armatorix" class="picoctf" data-toggle="tooltip" data-placement="top" title="picoctf.org" rel="noopener me" target="_blank"><img src="./assets/img/picoctf.svg" height="18px" alt="picoctf.org" loading="lazy" decoding="async" style="margin-left: -17px; margin-right: -17px;"></a>
                 
                 
                 
-                <a href="https://www.chess.com/member/armatorix" class="chess.com" data-toggle="tooltip" data-placement="top" title="chess.com"><img src="./assets/img/chesscom.png" height="18px"></a>
+                <a href="https://www.chess.com/member/armatorix" class="chess.com" data-toggle="tooltip" data-placement="top" title="chess.com" rel="noopener me" target="_blank"><img src="./assets/img/chesscom.png" height="18px" alt="chess.com" loading="lazy" decoding="async"></a>
                 
                 
                 
-                <a href="https://www.thingiverse.com/Armatorix" class="thingiverse" data-toggle="tooltip" data-placement="top" title="thingiverse.com"><img src="./assets/img/thingiverse.png" height="18px"></a>
+                <a href="https://www.thingiverse.com/Armatorix" class="thingiverse" data-toggle="tooltip" data-placement="top" title="thingiverse.com" rel="noopener me" target="_blank"><img src="./assets/img/thingiverse.png" height="18px" alt="thingiverse.com" loading="lazy" decoding="async"></a>
                 
                 
             </div>
@@ -168,7 +176,7 @@
 
             <div class="row">
                 <div class="col-lg-4" data-aos="fade-right">
-                    <img src="assets/img/me.jpg" class="img-fluid" alt="">
+                    <img src="assets/img/me.jpg" class="img-fluid" alt="Portrait of Wojciech Sokołowski" width="2048" height="1536" fetchpriority="high" decoding="async">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                     <h3>Problem solver / Golang developer</h3>
@@ -959,18 +967,14 @@
     </section><!-- End Contact Section -->
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
-    <script src="assets/js/matrix.js"></script>
+    <!-- Matrix background effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js" defer></script>
+    <script src="assets/js/matrix.js" defer></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 
 </body>
 
