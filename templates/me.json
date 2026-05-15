@@ -421,6 +421,25 @@
     ],
     "projects": [
         {
+            "icon": "ri-plant-line",
+            "url": "https://epole.farm",
+            "title": "epole.farm",
+            "content": "Farm management web app. Free to use platform for farmers to manage their farms and have all the data in one place.",
+            "technologies": {
+                "languages": [
+                    "Go",
+                    "React"
+                ],
+                "databases": [
+                    "PostgresDB"
+                ],
+                "cloud": "fly.io",
+                "tools": [
+                    "Docker"
+                ]
+            }
+        },
+        {
             "icon": "ri-history-line",
             "url": "https://github.com/Armatorix/GoRetro",
             "title": "GoRetro",
@@ -549,7 +568,7 @@
             "icon": "ri-link",
             "url": "https://github.com/Armatorix/BitLyke",
             "title": "Bitlyke",
-            "content": "Bit.ly like URL shortener.",
+            "content": "Bit.ly like URL shortener. Simple REST API with basic analytics.",
             "technologies": {
                 "languages": [
                     "Go"
