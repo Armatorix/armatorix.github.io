@@ -84,6 +84,7 @@
     ],
     "summary": {
         "description": "Favourite languages: Golang, C, Prolog, Python (in descending order). Daily using VS Code + Windows (WSL2), previously Ubuntu user (14.04-20.04). Love to have consistency across stacks and up-to-date systems. Enjoy working on both backend and frontend. Interested in distributed systems and performance optimization. Passionate about farming and modern agriculture technologies. Since 2024 building Ploryn, a free farm management platform used by hundreds of Polish farms.",
+        "short": "Backend engineer working mainly in Go since 2017, comfortable across backend, frontend and ops. Interested in distributed systems and performance optimization. Since 2024 building Ploryn, a free farm management platform used by hundreds of Polish farms.",
         "favorite_languages": [
             "Golang",
             "C",
@@ -175,6 +176,7 @@
         },
         {
             "company": "Family farming",
+            "excludeFromSkills": true,
             "location": "Zębowice, Poland",
             "position": "Farmer",
             "period": "Jun. 2010 - Present",
@@ -454,6 +456,7 @@
             "icon": "ri-telegram-line",
             "url": "https://github.com/Armatorix/TelegramOrganizationSync",
             "title": "Telegram organization sync",
+            "featured": true,
             "content": "Go daemon built on TDLib that keeps Telegram channel membership in sync with an organization server. Ships an OpenAPI contract and a dev server with admin UI.",
             "technologies": {
                 "languages": [
@@ -469,6 +472,7 @@
             "icon": "ri-history-line",
             "url": "https://github.com/Armatorix/GoRetro",
             "title": "GoRetro",
+            "featured": true,
             "content": "Agile sprint retrospective tool with multi-phase flow, real-time collaboration over WebSockets and optional AI auto-merge of similar tickets and action proposals. Designed to run behind an OAuth2 proxy.",
             "technologies": {
                 "languages": [
@@ -504,6 +508,7 @@
             "icon": "ri-line-chart-line",
             "url": "https://ai-mma.dev/",
             "title": "AI MMA",
+            "featured": true,
             "content": "Service with ML predictions for MMA fights. Co-created with Data Scientists",
             "technologies": {
                 "languages": [
@@ -542,6 +547,7 @@
             "icon": "ri-code-s-slash-line",
             "url": "https://github.com/Armatorix/enumgen",
             "title": "Go code generators",
+            "featured": true,
             "content": "enumgen adds String, JSON marshalling and validation methods to Go constant types. ddwrap wraps interfaces with Datadog tracing spans.",
             "technologies": {
                 "languages": [
