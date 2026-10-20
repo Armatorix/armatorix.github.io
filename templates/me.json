@@ -161,7 +161,7 @@
                     ],
                     "cloud": "OVH",
                     "tools": [
-                        "Docker",
+                        "Docker"
                     ],
                     "responsibilities": [
                         "Building a free farm management web app (PWA) from scratch: fields with maps, treatment logs, harvests, warehouse, soil tests and compliance reports",
@@ -447,7 +447,7 @@
                 "management": [
                     "Docker"
                 ],
-                "cloud": "OVH",
+                "cloud": "OVH"
             }
         },
         {
