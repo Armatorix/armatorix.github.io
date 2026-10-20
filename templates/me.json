@@ -1,7 +1,7 @@
 {
     "personal": {
         "name": "Wojciech Sokołowski",
-        "title": "solutions engineer",
+        "title": "senior software engineer",
         "location": "Zębowice, Poland",
         "email": "sokolwojtek1@gmail.com",
         "phone": "+48 725 205 367",
@@ -144,6 +144,13 @@
         }
     ],
     "experience": [
+        {
+            "company": "Alpaca",
+            "location": "Remote",
+            "position": "Senior Software Engineer",
+            "period": "Jul. 2026 - Present",
+            "projects": []
+        },
         {
             "company": "Ploryn AgroTech",
             "location": "Zębowice, Poland",
