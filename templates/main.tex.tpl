@@ -133,7 +133,7 @@
 \textbf{ {{- $proj.Title -}} }{{- if $proj.Technologies.Languages}} -- \textit{ {{- join $proj.Technologies.Languages ", " -}} }
 
 {{$proj.Content}}
-{{- if ne $i 5}}
+{{- if ne $i (sub (len $.Projects) 1)}}
 
 \medskip
 {{- end}}

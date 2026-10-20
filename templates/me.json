@@ -41,7 +41,7 @@
         },
         {
             "name": "HackerRank",
-            "url": "https://www.hackerrank.com/sokolwojtek1",
+            "url": "https://www.hackerrank.com/profile/sokolwojtek1",
             "iconImage": "./assets/img/hackerrank.png",
             "iconHeight": "18px",
             "title": "hackerrank.com"
@@ -54,12 +54,11 @@
             "title": "codewars.com"
         },
         {
-            "name": "PicoCTF",
-            "url": "https://play.picoctf.org/users/armatorix",
-            "iconImage": "./assets/img/picoctf.svg",
+            "name": "Codeforces",
+            "url": "https://codeforces.com/profile/armatorix",
+            "iconImage": "./assets/img/codeforces.svg",
             "iconHeight": "18px",
-            "title": "picoctf.org",
-            "iconStyle": "margin-left: -17px; margin-right: -17px;"
+            "title": "codeforces.com"
         },
         {
             "name": "Chess.com",
@@ -67,6 +66,13 @@
             "iconImage": "./assets/img/chesscom.png",
             "iconHeight": "18px",
             "title": "chess.com"
+        },
+        {
+            "name": "Lichess",
+            "url": "https://lichess.org/@/armatorix",
+            "iconImage": "./assets/img/lichess.svg",
+            "iconHeight": "18px",
+            "title": "lichess.org"
         },
         {
             "name": "Thingiverse",
@@ -77,7 +83,7 @@
         }
     ],
     "summary": {
-        "description": "Favourite languages: Golang, C, Prolog, Python (in descending order). Daily using VS Code + Windows (WSL2), previously Ubuntu user (14.04-20.04). Love to have consistency across stacks and up-to-date systems. Enjoy working on both backend and frontend. Interested in distributed systems and performance optimization. Passionate about farming and modern agriculture technologies.",
+        "description": "Favourite languages: Golang, C, Prolog, Python (in descending order). Daily using VS Code + Windows (WSL2), previously Ubuntu user (14.04-20.04). Love to have consistency across stacks and up-to-date systems. Enjoy working on both backend and frontend. Interested in distributed systems and performance optimization. Passionate about farming and modern agriculture technologies. Since 2024 building Ploryn, a free farm management platform used by hundreds of Polish farms.",
         "favorite_languages": [
             "Golang",
             "C",
@@ -138,13 +144,14 @@
     ],
     "experience": [
         {
-            "company": "Ploryn",
+            "company": "Ploryn AgroTech",
             "location": "Zębowice, Poland",
-            "position": "All in one",
+            "position": "Founder / All in one",
             "period": "Sep. 2024 - Present",
             "projects": [
                 {
-                    "name": "Farm management",
+                    "name": "Farm management platform",
+                    "url": "https://ploryn.pl",
                     "technologies": [
                         "Go",
                         "React"
@@ -152,12 +159,16 @@
                     "databases": [
                         "PostgresDB"
                     ],
-                    "cloud": "fly.io",
+                    "cloud": "OVH",
                     "tools": [
-                        "Docker"
+                        "Docker",
                     ],
                     "responsibilities": [
-                        "Creating web app for farm management from scratch as a free to use platform"
+                        "Building a free farm management web app (PWA) from scratch: fields with maps, treatment logs, harvests, warehouse, soil tests and compliance reports",
+                        "Integrating public agricultural data: ARiMR eWniosek import, IMGW weather, GUGiK orthophotos, MATIF prices and the MRiRW plant protection register",
+                        "Running a grain purchase price tracker across Polish buyers with price alerts",
+                        "Adding an AI advisor over farm data and an MCP server for AI assistants",
+                        "Platform used by 250+ farms registered only in the first 3 months"
                     ]
                 }
             ]
@@ -177,7 +188,7 @@
                         "JD tractors :D"
                     ],
                     "responsibilities": [
-                        "Staring Integrated Production in crops",
+                        "Starting Integrated Production in crops",
                         "Using modern technologies in farming",
                         "Operating agricultural machinery"
                     ]
@@ -424,7 +435,7 @@
             "icon": "ri-plant-line",
             "url": "https://ploryn.pl",
             "title": "Ploryn",
-            "content": "Farm management web app. Free to use platform for farmers to manage their farms and have all the data in one place.",
+            "content": "Free farm management platform for Polish farmers. Fields with maps, treatment logs, harvests, warehouse, reports, grain purchase prices and an AI advisor, with an MCP server for AI assistants.",
             "technologies": {
                 "languages": [
                     "Go",
@@ -433,9 +444,24 @@
                 "databases": [
                     "PostgresDB"
                 ],
-                "cloud": "fly.io",
-                "tools": [
+                "management": [
                     "Docker"
+                ],
+                "cloud": "OVH",
+            }
+        },
+        {
+            "icon": "ri-telegram-line",
+            "url": "https://github.com/Armatorix/TelegramOrganizationSync",
+            "title": "Telegram organization sync",
+            "content": "Go daemon built on TDLib that keeps Telegram channel membership in sync with an organization server. Ships an OpenAPI contract and a dev server with admin UI.",
+            "technologies": {
+                "languages": [
+                    "Go"
+                ],
+                "other": [
+                    "TDLib",
+                    "OpenAPI"
                 ]
             }
         },
@@ -443,11 +469,19 @@
             "icon": "ri-history-line",
             "url": "https://github.com/Armatorix/GoRetro",
             "title": "GoRetro",
-            "content": "Simple agile sprint retrospective. Built to be used with oauth proxy.",
+            "content": "Agile sprint retrospective tool with multi-phase flow, real-time collaboration over WebSockets and optional AI auto-merge of similar tickets and action proposals. Designed to run behind an OAuth2 proxy.",
             "technologies": {
                 "languages": [
                     "Go",
                     "React"
+                ],
+                "databases": [
+                    "PostgresDB",
+                    "Redis"
+                ],
+                "other": [
+                    "WebSockets",
+                    "oauth2-proxy"
                 ]
             }
         },
@@ -455,10 +489,14 @@
             "icon": "ri-markdown-line",
             "url": "https://github.com/Armatorix/GoPress",
             "title": "GoPress",
-            "content": "Lightweight WordPress alternative. Supports markdown files as input and HTML templates. Created for personal usage to generate this website.",
+            "content": "Lightweight CMS written in Go with an admin panel, markdown editor with preview, RSS feed and article view analytics.",
             "technologies": {
                 "languages": [
-                    "Go"
+                    "Go",
+                    "TypeScript"
+                ],
+                "databases": [
+                    "PostgresDB"
                 ]
             }
         },
@@ -469,10 +507,10 @@
             "content": "Service with ML predictions for MMA fights. Co-created with Data Scientists",
             "technologies": {
                 "languages": [
-                    "React",
+                    "Astro",
                     "Go"
                 ],
-                "cloud": "Fly.io"
+                "cloud": "OVH"
             }
         },
         {
@@ -498,6 +536,17 @@
                     "React"
                 ],
                 "cloud": "Gh Pages"
+            }
+        },
+        {
+            "icon": "ri-code-s-slash-line",
+            "url": "https://github.com/Armatorix/enumgen",
+            "title": "Go code generators",
+            "content": "enumgen adds String, JSON marshalling and validation methods to Go constant types. ddwrap wraps interfaces with Datadog tracing spans.",
+            "technologies": {
+                "languages": [
+                    "Go"
+                ]
             }
         },
         {
