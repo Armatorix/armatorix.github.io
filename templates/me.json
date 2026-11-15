@@ -2,6 +2,7 @@
     "personal": {
         "name": "Wojciech Sokołowski",
         "title": "solutions engineer",
+        "tagline": "Software engineer working in fintech, founder of the AgroTech startup Ploryn and co-owner of a family crop farm.",
         "location": "Zębowice, Poland",
         "email": "sokolwojtek1@gmail.com",
         "phone": "+48 725 205 367",
@@ -9,7 +10,7 @@
         "degree": "Bachelor of Engineering in Computer Science",
         "freelance": "Available",
         "description": "I don't believe that there are unsolvable tasks - sometimes they require more time.",
-        "focus": "IT and farming"
+        "focus": "fintech, AgroTech and farming"
     },
     "social": [
         {
@@ -82,9 +83,35 @@
             "title": "thingiverse.com"
         }
     ],
+    "roles": [
+        {
+            "icon": "ri-plant-line",
+            "title": "Farming",
+            "since": "since 2010",
+            "text": "Co-owner of a family crop farm run under Integrated Production."
+        },
+        {
+            "icon": "ri-code-s-slash-line",
+            "title": "Software engineering",
+            "since": "since 2017",
+            "text": "Backend engineer working mainly in Go since 2017, comfortable across backend, frontend and operations."
+        },
+        {
+            "icon": "ri-seedling-line",
+            "title": "AgroTech",
+            "since": "since 2024",
+            "text": "Founder of Ploryn, a free farm management platform used by 250+ Polish farms."
+        },
+        {
+            "icon": "ri-bank-line",
+            "title": "Fintech",
+            "since": "since 2026",
+            "text": "Senior Software Engineer at a fintech company since 2026."
+        }
+    ],
     "summary": {
-        "description": "Favourite languages: Golang, C, Prolog, Python (in descending order). Daily using VS Code + Windows (WSL2), previously Ubuntu user (14.04-20.04). Love to have consistency across stacks and up-to-date systems. Enjoy working on both backend and frontend. Interested in distributed systems and performance optimization. Passionate about farming and modern agriculture technologies. Since 2024 building Ploryn, a free farm management platform used by hundreds of Polish farms.",
-        "short": "Backend engineer working mainly in Go since 2017, comfortable across backend, frontend and ops. Interested in distributed systems and performance optimization. Since 2024 building Ploryn, a free farm management platform used by hundreds of Polish farms.",
+        "description": "Software engineer building backend systems, mainly in Go, since 2017. Currently Senior Software Engineer in fintech. Since 2024 founder of Ploryn, a free farm management platform used by hundreds of Polish farms. Co-owner of a family crop farm, which keeps the AgroTech work grounded in practice. Comfortable across backend, frontend and operations. Interested in distributed systems and performance optimization.",
+        "short": "Backend engineer working mainly in Go since 2017, currently in fintech, comfortable across backend, frontend and ops. Founder of Ploryn, a free farm management platform used by hundreds of Polish farms, and co-owner of a family crop farm.",
         "favorite_languages": [
             "Golang",
             "C",
@@ -103,11 +130,13 @@
         },
         {
             "name": "Windsurfing",
-            "icon": "ri-windy-line"
+            "icon": "ri-windy-line",
+            "url": "./surfing.html"
         },
         {
             "name": "Chess",
-            "icon": "ri-artboard-2-line"
+            "icon": "ri-artboard-2-line",
+            "url": "https://www.chess.com/member/armatorix"
         }
     ],
     "languages": [
@@ -145,7 +174,7 @@
     ],
     "experience": [
         {
-            "company": "Hidden",
+            "company": "Fintech company (undisclosed)",
             "location": "Remote",
             "position": "Senior Software Engineer",
             "period": "Jul. 2026 - Present",
@@ -154,7 +183,7 @@
         {
             "company": "Ploryn AgroTech",
             "location": "Zębowice, Poland",
-            "position": "Founder / All in one",
+            "position": "Founder and Engineer",
             "period": "Sep. 2024 - Present",
             "projects": [
                 {
@@ -182,10 +211,10 @@
             ]
         },
         {
-            "company": "Family farming",
+            "company": "Family farm",
             "excludeFromSkills": true,
             "location": "Zębowice, Poland",
-            "position": "Farmer",
+            "position": "Co-owner",
             "period": "Jun. 2010 - Present",
             "projects": [
                 {
@@ -444,6 +473,7 @@
             "icon": "ri-plant-line",
             "url": "https://ploryn.pl",
             "title": "Ploryn",
+            "flagship": true,
             "content": "Free farm management platform for Polish farmers. Fields with maps, treatment logs, harvests, warehouse, reports, grain purchase prices and an AI advisor, with an MCP server for AI assistants.",
             "technologies": {
                 "languages": [

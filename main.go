@@ -11,8 +11,10 @@ import (
 )
 
 type Personal struct {
-	Name        string `json:"name"`
-	Title       string `json:"title"`
+	Name  string `json:"name"`
+	Title string `json:"title"`
+	// Tagline is the one-sentence introduction under the name on the website.
+	Tagline     string `json:"tagline"`
 	Location    string `json:"location"`
 	Email       string `json:"email"`
 	Phone       string `json:"phone"`
@@ -34,9 +36,18 @@ type Social struct {
 	Username   string `json:"username"`
 }
 
+// Role is one of the "What I do" cards on the website.
+type Role struct {
+	Icon  string `json:"icon"`
+	Title string `json:"title"`
+	Since string `json:"since"`
+	Text  string `json:"text"`
+}
+
 type Interest struct {
 	Name string `json:"name"`
 	Icon string `json:"icon"`
+	URL  string `json:"url,omitempty"`
 }
 
 type Language struct {
@@ -68,6 +79,17 @@ type ExperienceProject struct {
 	Tools            []string `json:"tools,omitempty"`
 }
 
+// Stack lists everything the project was built with, in display order.
+func (p ExperienceProject) Stack() []string {
+	var s []string
+	s = append(s, p.Technologies...)
+	s = append(s, p.Databases...)
+	if p.Cloud != "" {
+		s = append(s, p.Cloud)
+	}
+	return append(s, p.Tools...)
+}
+
 type Experience struct {
 	Company  string              `json:"company"`
 	Location string              `json:"location"`
@@ -87,12 +109,22 @@ type ProjectTechnologies struct {
 	Other      []string `json:"other,omitempty"`
 }
 
+// All lists the project's technologies in display order.
+func (t ProjectTechnologies) All() []string {
+	var s []string
+	s = append(s, t.Languages...)
+	s = append(s, t.Databases...)
+	return append(s, t.Other...)
+}
+
 type Project struct {
 	Icon         string              `json:"icon"`
 	URL          string              `json:"url"`
 	Title        string              `json:"title"`
 	Content      string              `json:"content"`
 	Technologies ProjectTechnologies `json:"technologies"`
+	// Flagship projects get the wide banner above the project list on the website.
+	Flagship bool `json:"flagship,omitempty"`
 	// Featured projects are the ones shown in the short CV.
 	Featured bool `json:"featured,omitempty"`
 }
@@ -107,6 +139,7 @@ type Summary struct {
 type Me struct {
 	Personal   Personal     `json:"personal"`
 	Social     []Social     `json:"social"`
+	Roles      []Role       `json:"roles"`
 	Summary    Summary      `json:"summary"`
 	Interests  []Interest   `json:"interests"`
 	Languages  []Language   `json:"languages"`
@@ -309,6 +342,14 @@ func (m *Me) skills() []SkillGroup {
 
 var htmlFuncs = template.FuncMap{
 	"lower": strings.ToLower,
+	"nospace": func(s string) string {
+		return strings.ReplaceAll(s, " ", "")
+	},
+	"join": strings.Join,
+	// current reports whether a period like "Jul. 2026 - Present" is ongoing.
+	"current": func(period string) bool {
+		return strings.HasSuffix(period, "Present")
+	},
 }
 
 var texFuncs = template.FuncMap{

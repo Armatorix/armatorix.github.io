@@ -9,13 +9,14 @@
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="{{.Personal.Name}} | {{.Personal.Title}}">
-    <meta name="description" content="{{.Personal.Name}} - {{.Personal.Title}} based in {{.Personal.Location}}. {{.Personal.Description}}">
-    <meta name="keywords" content="{{.Personal.Name}}, Armatorix, golang, go developer, software engineer, solutions engineer, cybersecurity, backend developer, distributed systems, Poland">
+    <meta name="description" content="{{.Personal.Name}} - {{.Personal.Title}} based in {{.Personal.Location}}. {{.Personal.Tagline}}">
+    <meta name="keywords" content="{{.Personal.Name}}, Armatorix, golang, go developer, software engineer, solutions engineer, fintech, agrotech, Ploryn, farm management, backend developer, distributed systems, Poland">
     <meta name="author" content="{{.Personal.Name}}">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="googlebot" content="index, follow">
     <meta name="language" content="English">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#2c6a2b" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1d4a1e" media="(prefers-color-scheme: dark)">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://{{.Personal.Website}}/">
@@ -24,7 +25,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://{{.Personal.Website}}/">
     <meta property="og:title" content="{{.Personal.Name}} | {{.Personal.Title}}">
-    <meta property="og:description" content="{{.Personal.Name}} - {{.Personal.Title}} based in {{.Personal.Location}}. {{.Personal.Description}}">
+    <meta property="og:description" content="{{.Personal.Name}} - {{.Personal.Title}} based in {{.Personal.Location}}. {{.Personal.Tagline}}">
     <meta property="og:image" content="https://{{.Personal.Website}}/assets/img/me.jpg">
     <meta property="og:image:alt" content="{{.Personal.Name}} - {{.Personal.Title}}">
     <meta property="og:image:type" content="image/jpeg">
@@ -35,7 +36,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://{{.Personal.Website}}/">
     <meta name="twitter:title" content="{{.Personal.Name}} | {{.Personal.Title}}">
-    <meta name="twitter:description" content="{{.Personal.Name}} - {{.Personal.Title}} based in {{.Personal.Location}}. {{.Personal.Description}}">
+    <meta name="twitter:description" content="{{.Personal.Name}} - {{.Personal.Title}} based in {{.Personal.Location}}. {{.Personal.Tagline}}">
     <meta name="twitter:image" content="https://{{.Personal.Website}}/assets/img/me.jpg">
     <meta name="twitter:image:alt" content="{{.Personal.Name}} - {{.Personal.Title}}">
     {{range .Social}}{{if eq .Name "X"}}<meta name="twitter:creator" content="@{{.Username}}">
@@ -49,7 +50,7 @@
         "@type": "Person",
         "name": "{{.Personal.Name}}",
         "jobTitle": "{{.Personal.Title}}",
-        "description": "{{.Personal.Description}}",
+        "description": "{{.Personal.Tagline}}",
         "email": "mailto:{{.Personal.Email}}",
         "telephone": "{{.Personal.Phone}}",
         "url": "https://{{.Personal.Website}}/",
@@ -64,306 +65,253 @@
     }
     </script>
 
+    <!-- Apply the saved theme before first paint -->
+    <script>
+        try {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="assets/img/ico.png">
 
-    <!-- Preconnect for external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-
-    <!-- Preload LCP image -->
     <link rel="preload" as="image" href="assets/img/me.jpg" fetchpriority="high">
 
-    <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icon fonts -->
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
+    <link href="assets/css/site.css" rel="stylesheet">
 </head>
 
-<body class="main">
+<body>
 
-    <!-- ======= Header ======= -->
-    <header id="header">
-        <div class="container">
-
-            <h1><a href="index.html">{{.Personal.Name}}</a></h1>
-            <h2>I'm a <span class="typed-text">{{.Personal.Title}}</span> from Poland</h2>
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link active" href="">Home</a></li>
-                    <li><a class="nav-link" href="#resume">Resume</a></li>
-                    <li><a class="nav-link" href="./godev_wsokolowski.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li>
-                    <li><a class="nav-link" href="./godev_wsokolowski_short.pdf"><i class="bi bi-file-pdf"></i>Short PDF</a></li>
-                    <li><a class="nav-link" href="#about">About</a></li>
-                    <li><a class="nav-link" href="#projects">Projects</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </nav><!-- .navbar -->
-            
-            <i class="bi bi-list mobile-nav-toggle"></i>
-
-            <div class="social-links">
-                {{range .Social}}
-                {{if .Icon}}
-                <a href="{{.URL}}" class="{{.Name | lower}}" data-placement="top" title="{{.Title}}" rel="noopener me" target="_blank"><i class="{{.Icon}}"></i></a>
-                {{else if .IconImage}}
-                <a href="{{.URL}}" class="{{.Name | lower}}" data-toggle="tooltip" data-placement="top" title="{{.Title}}" rel="noopener me" target="_blank"><img src="{{.IconImage}}" height="{{.IconHeight}}" alt="{{.Title}}" loading="lazy" decoding="async"{{if .IconStyle}} style="{{.IconStyle}}"{{end}}></a>
-                {{end}}
-                {{end}}
-            </div>
-
+    <header class="topbar">
+        <div class="wrap">
+            <a class="brand" href="#top"><b>~/</b>wsokol.dev</a>
+            <nav class="nav" aria-label="Sections">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="./godev_wsokolowski_short.pdf">CV</a>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+                <i class="ri-contrast-2-line" aria-hidden="true"></i>
+            </button>
         </div>
-    </header><!-- End Header -->
+    </header>
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <main id="top">
 
-        <!-- ======= About Me ======= -->
-        <div class="about-me container">
-
-            <div class="section-title">
-                <h2>About</h2>
-                <p>Learn more about me</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4" data-aos="fade-right">
-                    <img src="assets/img/me.jpg" class="img-fluid" alt="Portrait of {{.Personal.Name}}" width="2048" height="1536" fetchpriority="high" decoding="async">
-                </div>
-                <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                    <h3>Problem solver / Golang developer</h3>
-                    <p class="fst-italic">
-                        {{.Personal.Description}}
-                    </p>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor / <a
-                                            href="https://lwiatko.org/o-konkursie">Taon</a></span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
-                                    <span>{{.Personal.Email}}</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
-                                    <span>{{.Personal.Freelance}}</span>
-                                </li>
-                            </ul>
+        <div class="hero">
+            <div class="wrap">
+                <div class="hero-grid">
+                    <div>
+                        <p class="eyebrow">{{.Personal.Title}} &middot; {{.Personal.Location}}</p>
+                        <h1>{{.Personal.Name}}</h1>
+                        <p class="motto">{{.Personal.Description}}</p>
+                        <p class="lede">{{.Personal.Tagline}}</p>
+                        <div class="hero-actions">
+                            <a class="btn primary" href="mailto:{{.Personal.Email}}"><i class="ri-mail-line" aria-hidden="true"></i>Get in touch</a>
+                            <a class="btn" href="./godev_wsokolowski_short.pdf"><i class="ri-file-download-line" aria-hidden="true"></i>One-page CV</a>
+                            <a class="btn" href="./godev_wsokolowski.pdf"><i class="ri-file-download-line" aria-hidden="true"></i>Full CV</a>
                         </div>
                     </div>
-                    <p>
-                        Used to do some Math. </br>
-                        Current <i class="ri-focus-3-line" style="color: #FFF;"></i>: {{.Personal.Focus}}.
-                    </p>
+                    <img class="portrait" src="assets/img/me.jpg" alt="Portrait of {{.Personal.Name}}" width="2111" height="2160" fetchpriority="high" decoding="async">
                 </div>
             </div>
+            <div class="rows" aria-hidden="true"></div>
+        </div>
 
-        </div><!-- End About Me -->
-
-        <!-- ======= Interests ======= -->
-        <div class="interests container">
-
-            <div class="section-title">
-                <h2>Interests</h2>
-            </div>
-
-            <div class="row">
-                {{range .Interests}}
-                <div class="col-lg-3 col-md-4">
-                    <div class="icon-box">
-                        <i class="{{.Icon}}" style="color: skyblue;"></i>
-                        <h3>{{.Name}}</h3>
-                    </div>
+        <section id="about">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Four fields I work</h2>
                 </div>
-                {{end}}
-            </div>
-
-        </div><!-- End Interests -->
-
-    </section><!-- End About Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Resume</h2>
-                <p>Check My Resume</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3 class="resume-title">Summary</h3>
-                    <div class="resume-item pb-0">
-                        <h4>{{.Personal.Name}}</h4>
-                        <p><em>{{.Summary.Description}}</em></p>
-                    </div>
-
-                    <h3 class="resume-title">Education</h3>
-                    {{range .Education}}
-                    <div class="resume-item">
-                        <h4>{{.Degree}}</h4>
-                        <h5>{{.Period}}</h5>
-                        <p><em>{{if .Faculty}}{{.Faculty}}, {{end}}{{.Institution}}</em></p>
-                        {{if .Thesis}}
-                        <p>Thesis topic: {{.Thesis.Topic}}
-                            </br>
-                            {{.Thesis.Description}}
-                        </p>
-                        {{end}}
+                <div class="plots">
+                    {{range .Roles}}
+                    <div class="plot">
+                        <p class="since">{{.Since}}</p>
+                        <h3>{{.Title}}</h3>
+                        <p>{{.Text}}</p>
                     </div>
                     {{end}}
                 </div>
+                <p class="about-text">{{.Summary.Description}}</p>
+            </div>
+        </section>
 
-                <div class="col-lg-6">
-                    <h3 class="resume-title">Professional Experience</h3>
-                    {{range $ei, $exp := .Experience}}
-                    <div class="resume-item">
-                        <h4>{{$exp.Company}}</h4>
-                        <h5>{{$exp.Period}}</h5>
-                        <p><em>{{$exp.Location}}</em></p>
-                        <p>
-                        <dl class="list-group list-group-flush">
-                            {{range $pi, $proj := $exp.Projects}}
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project{{$ei}}{{$pi}}Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project{{$ei}}{{$pi}}Collapse">
-                                    {{$proj.Name}}
-                                </a>
-                                <div class="collapse" id="project{{$ei}}{{$pi}}Collapse">
-                                    {{if $proj.Technologies}}
-                                    <p><strong>Technologies:</strong> {{range $ti, $tech := $proj.Technologies}}{{if $ti}}, {{end}}{{$tech}}{{end}}</p>
-                                    {{end}}
-                                    {{if $proj.Responsibilities}}
-                                    <ul>
-                                        {{range $proj.Responsibilities}}
-                                        <li>{{.}}</li>
-                                        {{end}}
-                                    </ul>
-                                    {{end}}
-                                    {{if $proj.Tools}}
-                                    <p><strong>Tools:</strong> {{range $ti, $tool := $proj.Tools}}{{if $ti}}, {{end}}{{$tool}}{{end}}</p>
-                                    {{end}}
-                                    {{if $proj.Databases}}
-                                    <p><strong>Databases:</strong> {{range $di, $db := $proj.Databases}}{{if $di}}, {{end}}{{$db}}{{end}}</p>
-                                    {{end}}
-                                    {{if $proj.Cloud}}
-                                    <p><strong>Cloud:</strong> {{$proj.Cloud}}</p>
-                                    {{end}}
-                                </div>
-                            </dt>
+        <section id="experience">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Experience</h2>
+                </div>
+                <p class="group-label now"><span>Now</span></p>
+                <div class="jobs">
+                    {{range .Experience}}{{if current .Period}}{{template "job" .}}{{end}}{{end}}
+                </div>
+                <p class="group-label"><span>Before</span></p>
+                <div class="jobs">
+                    {{range .Experience}}{{if not (current .Period)}}{{template "job" .}}{{end}}{{end}}
+                </div>
+            </div>
+        </section>
+
+        <section id="background">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Background</h2>
+                </div>
+                <div class="facts">
+                    <div>
+                        <h3>Education</h3>
+                        <ul>
+                            {{range .Education}}
+                            <li>
+                                <strong>{{.Degree}}</strong>
+                                <small>{{if .Faculty}}{{.Faculty}}, {{end}}{{.Institution}} &middot; {{.Period}}</small>
+                                {{if .Thesis}}<small>Thesis: {{.Thesis.Topic}}</small>{{end}}
+                            </li>
                             {{end}}
+                        </ul>
+                        <p class="aside">Used to do some Math. Also a <a href="https://lwiatko.org/o-konkursie">Taon</a>.</p>
+                    </div>
+                    <div>
+                        <h3>Languages</h3>
+                        <ul class="inline">
+                            {{range .Languages}}
+                            <li>{{.Name}}<span class="level">{{.Level}}</span></li>
+                            {{end}}
+                        </ul>
+                        <p class="aside tech">{{join .Summary.FavoriteLanguages " &gt; "}}</p>
+                    </div>
+                    <div>
+                        <h3>Off the clock</h3>
+                        <ul class="inline">
+                            {{range .Interests}}
+                            <li><i class="{{.Icon}}" aria-hidden="true"></i>{{if .URL}}<a href="{{.URL}}">{{.Name}}</a>{{else}}{{.Name}}{{end}}</li>
+                            {{end}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Projects</h2>
+                </div>
+                {{range $p := .Projects}}{{if $p.Flagship}}
+                <div class="flagship">
+                    <div>
+                        <p class="tech">{{join $p.Technologies.All " · "}}</p>
+                        <h3>{{$p.Title}}</h3>
+                        <p>{{$p.Content}}</p>
+                    </div>
+                    <a class="btn primary" href="{{$p.URL}}" rel="noopener" target="_blank">Visit<i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                </div>
+                {{end}}{{end}}
+                <div class="project-list">
+                    {{range $p := .Projects}}{{if not $p.Flagship}}
+                    {{if and $p.URL (ne $p.URL "#")}}<a class="project-row" href="{{$p.URL}}" rel="noopener" target="_blank">{{else}}<div class="project-row">{{end}}
+                        <h3>{{$p.Title}}</h3>
+                        <p>{{$p.Content}}</p>
+                        <span class="tech">{{join $p.Technologies.All " · "}}</span>
+                        <span class="ext">{{if and $p.URL (ne $p.URL "#")}}<i class="ri-arrow-right-up-line" aria-hidden="true"></i>{{end}}</span>
+                    {{if and $p.URL (ne $p.URL "#")}}</a>{{else}}</div>{{end}}
+                    {{end}}{{end}}
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Contact</h2>
+                </div>
+                <div class="contact">
+                    <div>
+                        <dl>
+                            <dt>Email</dt>
+                            <dd class="big"><a href="mailto:{{.Personal.Email}}">{{.Personal.Email}}</a></dd>
+                            <dt>Phone</dt>
+                            <dd><a href="tel:{{.Personal.Phone | nospace}}">{{.Personal.Phone}}</a></dd>
+                            <dt>Location</dt>
+                            <dd>{{.Personal.Location}}</dd>
+                            <dt>Freelance</dt>
+                            <dd>{{.Personal.Freelance}}</dd>
                         </dl>
-                        </p>
                     </div>
-                    {{end}}
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="projects" class="projects">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Projects</h2>
-                <p>My projects</p>
-            </div>
-            <div class="row">
-                {{range $i, $p := .Projects}}
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="{{$p.URL}}">
-                        <div class="icon-box">
-                            <div class="icon"><i class="{{$p.Icon}}"></i></div>
-                            <h4>{{$p.Title}}</h4>
-                            <p>{{$p.Content}}</p>
-                        </div>
-                    </a>
-                </div>
-                {{end}}
-            </div>
-        </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Contact</h2>
-                <p>Contact Me</p>
-            </div>
-
-            <div class="row mt-2">
-
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-map"></i>
-                        <h3>My Address</h3>
-                        <p>{{.Personal.Location}}</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-share-alt"></i>
-                        <h3>Social Profiles</h3>
-                        <div class="social-links">
+                    <div>
+                        <div class="socials">
                             {{range .Social}}
-                            {{if .Icon}}
-                            <a href="{{.URL}}" class="{{.Name | lower}}" title="{{.Title}}" rel="noopener me" target="_blank"><i class="{{.Icon}}"></i></a>
-                            {{else if .IconImage}}
-                            <a href="{{.URL}}" class="{{.Name | lower}}" title="{{.Title}}" rel="noopener me" target="_blank"><img src="{{.IconImage}}" height="{{.IconHeight}}" alt="{{.Title}}" loading="lazy" decoding="async"{{if .IconStyle}} style="{{.IconStyle}}"{{end}}></a>
-                            {{end}}
+                            <a href="{{.URL}}" class="{{.Name | lower}}" title="{{.Title}}" rel="noopener me" target="_blank">{{if .Icon}}<i class="{{.Icon}}" aria-hidden="true"></i>{{else if .IconImage}}<img src="{{.IconImage}}" alt="" loading="lazy" decoding="async"{{if .IconStyle}} style="{{.IconStyle}}"{{end}}>{{end}}{{.Name}}</a>
                             {{end}}
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-envelope"></i>
-                        <h3>Email Me</h3>
-                        <p>{{.Personal.Email}}</p>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-phone-call"></i>
-                        <h3>Call Me</h3>
-                        <p>{{.Personal.Phone}}</p>
-                    </div>
-                </div>
             </div>
+        </section>
 
-        </div>
-    </section><!-- End Contact Section -->
+    </main>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <footer>
+        <div class="wrap">{{.Personal.Name}} &middot; built from one JSON file with Go &middot; <a href="https://github.com/Armatorix/armatorix.github.io">source</a></div>
+    </footer>
 
-    <!-- Matrix background effect -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js" defer></script>
-    <script src="assets/js/matrix.js" defer></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js" defer></script>
+    <script>
+        document.querySelector('.theme-toggle').addEventListener('click', function () {
+            var root = document.documentElement;
+            var dark = root.dataset.theme
+                ? root.dataset.theme === 'dark'
+                : window.matchMedia('(prefers-color-scheme: dark)').matches;
+            root.dataset.theme = dark ? 'light' : 'dark';
+            try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+        });
+    </script>
 
 </body>
 
 </html>
+
+{{define "job"}}
+                    <article class="job">
+                        <div class="job-when">
+                            <span class="period">{{.Period}}</span><br>
+                            <span>{{.Location}}</span>
+                        </div>
+                        <div>
+                            <h3>{{.Position}} <span>/ {{.Company}}</span></h3>
+                            {{range $proj := .Projects}}
+                            <div class="project">
+                                <h4>{{if $proj.URL}}<a href="{{$proj.URL}}" rel="noopener" target="_blank">{{$proj.Name}}</a>{{else}}{{$proj.Name}}{{end}}</h4>
+                                <p class="tech">{{join $proj.Stack " · "}}</p>
+                                {{if $proj.Responsibilities}}
+                                <ul class="duties">
+                                    {{range $ri, $r := $proj.Responsibilities}}{{if lt $ri 4}}<li>{{$r}}</li>
+                                    {{end}}{{end}}
+                                </ul>
+                                {{if gt (len $proj.Responsibilities) 4}}
+                                <details class="more">
+                                    <summary>+ {{len (slice $proj.Responsibilities 4)}} more</summary>
+                                    <ul class="duties">
+                                        {{range $ri, $r := $proj.Responsibilities}}{{if ge $ri 4}}<li>{{$r}}</li>
+                                        {{end}}{{end}}
+                                    </ul>
+                                </details>
+                                {{end}}
+                                {{end}}
+                            </div>
+                            {{end}}
+                        </div>
+                    </article>
+{{end}}

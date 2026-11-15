@@ -9,13 +9,14 @@
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Wojciech Sokołowski | solutions engineer">
-    <meta name="description" content="Wojciech Sokołowski - solutions engineer based in Zębowice, Poland. I don't believe that there are unsolvable tasks - sometimes they require more time.">
-    <meta name="keywords" content="Wojciech Sokołowski, Armatorix, golang, go developer, software engineer, solutions engineer, cybersecurity, backend developer, distributed systems, Poland">
+    <meta name="description" content="Wojciech Sokołowski - solutions engineer based in Zębowice, Poland. Software engineer working in fintech, founder of the AgroTech startup Ploryn and co-owner of a family crop farm.">
+    <meta name="keywords" content="Wojciech Sokołowski, Armatorix, golang, go developer, software engineer, solutions engineer, fintech, agrotech, Ploryn, farm management, backend developer, distributed systems, Poland">
     <meta name="author" content="Wojciech Sokołowski">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="googlebot" content="index, follow">
     <meta name="language" content="English">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#2c6a2b" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1d4a1e" media="(prefers-color-scheme: dark)">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://me.wsokol.dev/">
@@ -24,7 +25,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://me.wsokol.dev/">
     <meta property="og:title" content="Wojciech Sokołowski | solutions engineer">
-    <meta property="og:description" content="Wojciech Sokołowski - solutions engineer based in Zębowice, Poland. I don't believe that there are unsolvable tasks - sometimes they require more time.">
+    <meta property="og:description" content="Wojciech Sokołowski - solutions engineer based in Zębowice, Poland. Software engineer working in fintech, founder of the AgroTech startup Ploryn and co-owner of a family crop farm.">
     <meta property="og:image" content="https://me.wsokol.dev/assets/img/me.jpg">
     <meta property="og:image:alt" content="Wojciech Sokołowski - solutions engineer">
     <meta property="og:image:type" content="image/jpeg">
@@ -35,7 +36,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://me.wsokol.dev/">
     <meta name="twitter:title" content="Wojciech Sokołowski | solutions engineer">
-    <meta name="twitter:description" content="Wojciech Sokołowski - solutions engineer based in Zębowice, Poland. I don't believe that there are unsolvable tasks - sometimes they require more time.">
+    <meta name="twitter:description" content="Wojciech Sokołowski - solutions engineer based in Zębowice, Poland. Software engineer working in fintech, founder of the AgroTech startup Ploryn and co-owner of a family crop farm.">
     <meta name="twitter:image" content="https://me.wsokol.dev/assets/img/me.jpg">
     <meta name="twitter:image:alt" content="Wojciech Sokołowski - solutions engineer">
     <meta name="twitter:creator" content="@Armatorix">
@@ -49,7 +50,7 @@
         "@type": "Person",
         "name": "Wojciech Sokołowski",
         "jobTitle": "solutions engineer",
-        "description": "I don't believe that there are unsolvable tasks - sometimes they require more time.",
+        "description": "Software engineer working in fintech, founder of the AgroTech startup Ploryn and co-owner of a family crop farm.",
         "email": "mailto:sokolwojtek1@gmail.com",
         "telephone": "+48 725 205 367",
         "url": "https://me.wsokol.dev/",
@@ -73,984 +74,676 @@
     }
     </script>
 
+    <!-- Apply the saved theme before first paint -->
+    <script>
+        try {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="assets/img/ico.png">
 
-    <!-- Preconnect for external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-
-    <!-- Preload LCP image -->
     <link rel="preload" as="image" href="assets/img/me.jpg" fetchpriority="high">
 
-    <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icon fonts -->
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
+    <link href="assets/css/site.css" rel="stylesheet">
 </head>
 
-<body class="main">
+<body>
 
-    <!-- ======= Header ======= -->
-    <header id="header">
-        <div class="container">
-
-            <h1><a href="index.html">Wojciech Sokołowski</a></h1>
-            <h2>I'm a <span class="typed-text">solutions engineer</span> from Poland</h2>
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link active" href="">Home</a></li>
-                    <li><a class="nav-link" href="#resume">Resume</a></li>
-                    <li><a class="nav-link" href="./godev_wsokolowski.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li>
-                    <li><a class="nav-link" href="./godev_wsokolowski_short.pdf"><i class="bi bi-file-pdf"></i>Short PDF</a></li>
-                    <li><a class="nav-link" href="#about">About</a></li>
-                    <li><a class="nav-link" href="#projects">Projects</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </nav><!-- .navbar -->
-            
-            <i class="bi bi-list mobile-nav-toggle"></i>
-
-            <div class="social-links">
-                
-                
-                <a href="https://x.com/Armatorix" class="x" data-placement="top" title="twitter.com" rel="noopener me" target="_blank"><i class="bi bi-twitter"></i></a>
-                
-                
-                
-                <a href="https://www.linkedin.com/in/Armatorix" class="linkedin" data-placement="top" title="linkedin.com" rel="noopener me" target="_blank"><i class="bi bi-linkedin"></i></a>
-                
-                
-                
-                <a href="https://github.com/Armatorix" class="github" data-placement="top" title="github.com" rel="noopener me" target="_blank"><i class="bi bi-github"></i></a>
-                
-                
-                
-                <a href="https://stackoverflow.com/users/6107031/armatorix" class="stackoverflow" data-placement="top" title="stackoverflow.com" rel="noopener me" target="_blank"><i class="ri-stack-overflow-line"></i></a>
-                
-                
-                
-                <a href="https://www.hackerrank.com/profile/sokolwojtek1" class="hackerrank" data-toggle="tooltip" data-placement="top" title="hackerrank.com" rel="noopener me" target="_blank"><img src="./assets/img/hackerrank.png" height="18px" alt="hackerrank.com" loading="lazy" decoding="async"></a>
-                
-                
-                
-                <a href="https://www.codewars.com/users/Armatorix" class="codewars" data-toggle="tooltip" data-placement="top" title="codewars.com" rel="noopener me" target="_blank"><img src="./assets/img/codewars.svg" height="18px" alt="codewars.com" loading="lazy" decoding="async"></a>
-                
-                
-                
-                <a href="https://codeforces.com/profile/armatorix" class="codeforces" data-toggle="tooltip" data-placement="top" title="codeforces.com" rel="noopener me" target="_blank"><img src="./assets/img/codeforces.svg" height="18px" alt="codeforces.com" loading="lazy" decoding="async"></a>
-                
-                
-                
-                <a href="https://www.chess.com/member/armatorix" class="chess.com" data-toggle="tooltip" data-placement="top" title="chess.com" rel="noopener me" target="_blank"><img src="./assets/img/chesscom.png" height="18px" alt="chess.com" loading="lazy" decoding="async"></a>
-                
-                
-                
-                <a href="https://lichess.org/@/armatorix" class="lichess" data-toggle="tooltip" data-placement="top" title="lichess.org" rel="noopener me" target="_blank"><img src="./assets/img/lichess.svg" height="18px" alt="lichess.org" loading="lazy" decoding="async"></a>
-                
-                
-                
-                <a href="https://www.thingiverse.com/Armatorix" class="thingiverse" data-toggle="tooltip" data-placement="top" title="thingiverse.com" rel="noopener me" target="_blank"><img src="./assets/img/thingiverse.png" height="18px" alt="thingiverse.com" loading="lazy" decoding="async"></a>
-                
-                
-            </div>
-
+    <header class="topbar">
+        <div class="wrap">
+            <a class="brand" href="#top"><b>~/</b>wsokol.dev</a>
+            <nav class="nav" aria-label="Sections">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="./godev_wsokolowski_short.pdf">CV</a>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+                <i class="ri-contrast-2-line" aria-hidden="true"></i>
+            </button>
         </div>
-    </header><!-- End Header -->
+    </header>
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <main id="top">
 
-        <!-- ======= About Me ======= -->
-        <div class="about-me container">
-
-            <div class="section-title">
-                <h2>About</h2>
-                <p>Learn more about me</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4" data-aos="fade-right">
-                    <img src="assets/img/me.jpg" class="img-fluid" alt="Portrait of Wojciech Sokołowski" width="2048" height="1536" fetchpriority="high" decoding="async">
-                </div>
-                <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                    <h3>Problem solver / Golang developer</h3>
-                    <p class="fst-italic">
-                        I don't believe that there are unsolvable tasks - sometimes they require more time.
-                    </p>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor / <a
-                                            href="https://lwiatko.org/o-konkursie">Taon</a></span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
-                                    <span>sokolwojtek1@gmail.com</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
-                                    <span>Available</span>
-                                </li>
-                            </ul>
+        <div class="hero">
+            <div class="wrap">
+                <div class="hero-grid">
+                    <div>
+                        <p class="eyebrow">solutions engineer &middot; Zębowice, Poland</p>
+                        <h1>Wojciech Sokołowski</h1>
+                        <p class="motto">I don't believe that there are unsolvable tasks - sometimes they require more time.</p>
+                        <p class="lede">Software engineer working in fintech, founder of the AgroTech startup Ploryn and co-owner of a family crop farm.</p>
+                        <div class="hero-actions">
+                            <a class="btn primary" href="mailto:sokolwojtek1@gmail.com"><i class="ri-mail-line" aria-hidden="true"></i>Get in touch</a>
+                            <a class="btn" href="./godev_wsokolowski_short.pdf"><i class="ri-file-download-line" aria-hidden="true"></i>One-page CV</a>
+                            <a class="btn" href="./godev_wsokolowski.pdf"><i class="ri-file-download-line" aria-hidden="true"></i>Full CV</a>
                         </div>
                     </div>
-                    <p>
-                        Used to do some Math. </br>
-                        Current <i class="ri-focus-3-line" style="color: #FFF;"></i>: IT and farming.
-                    </p>
+                    <img class="portrait" src="assets/img/me.jpg" alt="Portrait of Wojciech Sokołowski" width="2111" height="2160" fetchpriority="high" decoding="async">
                 </div>
             </div>
+            <div class="rows" aria-hidden="true"></div>
+        </div>
 
-        </div><!-- End About Me -->
-
-        <!-- ======= Interests ======= -->
-        <div class="interests container">
-
-            <div class="section-title">
-                <h2>Interests</h2>
-            </div>
-
-            <div class="row">
-                
-                <div class="col-lg-3 col-md-4">
-                    <div class="icon-box">
-                        <i class="ri-plant-line" style="color: skyblue;"></i>
+        <section id="about">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Four fields I work</h2>
+                </div>
+                <div class="plots">
+                    
+                    <div class="plot">
+                        <p class="since">since 2010</p>
                         <h3>Farming</h3>
+                        <p>Co-owner of a family crop farm run under Integrated Production.</p>
                     </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-4">
-                    <div class="icon-box">
-                        <i class="ri-file-code-line" style="color: skyblue;"></i>
-                        <h3>Coding challenges</h3>
+                    
+                    <div class="plot">
+                        <p class="since">since 2017</p>
+                        <h3>Software engineering</h3>
+                        <p>Backend engineer working mainly in Go since 2017, comfortable across backend, frontend and operations.</p>
                     </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-4">
-                    <div class="icon-box">
-                        <i class="ri-windy-line" style="color: skyblue;"></i>
-                        <h3>Windsurfing</h3>
+                    
+                    <div class="plot">
+                        <p class="since">since 2024</p>
+                        <h3>AgroTech</h3>
+                        <p>Founder of Ploryn, a free farm management platform used by 250+ Polish farms.</p>
                     </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-4">
-                    <div class="icon-box">
-                        <i class="ri-artboard-2-line" style="color: skyblue;"></i>
-                        <h3>Chess</h3>
+                    
+                    <div class="plot">
+                        <p class="since">since 2026</p>
+                        <h3>Fintech</h3>
+                        <p>Senior Software Engineer at a fintech company since 2026.</p>
                     </div>
+                    
                 </div>
-                
+                <p class="about-text">Software engineer building backend systems, mainly in Go, since 2017. Currently Senior Software Engineer in fintech. Since 2024 founder of Ploryn, a free farm management platform used by hundreds of Polish farms. Co-owner of a family crop farm, which keeps the AgroTech work grounded in practice. Comfortable across backend, frontend and operations. Interested in distributed systems and performance optimization.</p>
             </div>
+        </section>
 
-        </div><!-- End Interests -->
-
-    </section><!-- End About Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Resume</h2>
-                <p>Check My Resume</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3 class="resume-title">Summary</h3>
-                    <div class="resume-item pb-0">
-                        <h4>Wojciech Sokołowski</h4>
-                        <p><em>Favourite languages: Golang, C, Prolog, Python (in descending order). Daily using VS Code + Windows (WSL2), previously Ubuntu user (14.04-20.04). Love to have consistency across stacks and up-to-date systems. Enjoy working on both backend and frontend. Interested in distributed systems and performance optimization. Passionate about farming and modern agriculture technologies. Since 2024 building Ploryn, a free farm management platform used by hundreds of Polish farms.</em></p>
-                    </div>
-
-                    <h3 class="resume-title">Education</h3>
-                    
-                    <div class="resume-item">
-                        <h4>Agricultural qualifications</h4>
-                        <h5>2019 - 2020</h5>
-                        <p><em>Centrum Kształcenia Rolniczego w Mokrzeszowie</em></p>
-                        
-                    </div>
-                    
-                    <div class="resume-item">
-                        <h4>Bachelor of Engineering in Computer Science</h4>
-                        <h5>2014 - 2018</h5>
-                        <p><em>Faculty of Fundamental Problems of Technology, Wrocław University of Science and Technology</em></p>
-                        
-                        <p>Thesis topic: Position Based Messenger
-                            </br>
-                            Frontend: Java - Android mobile app, Backend: NodeJS, Express, MongoDB
-                        </p>
-                        
-                    </div>
-                    
+        <section id="experience">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Experience</h2>
                 </div>
+                <p class="group-label now"><span>Now</span></p>
+                <div class="jobs">
+                    
+                    <article class="job">
+                        <div class="job-when">
+                            <span class="period">Jul. 2026 - Present</span><br>
+                            <span>Remote</span>
+                        </div>
+                        <div>
+                            <h3>Senior Software Engineer <span>/ Fintech company (undisclosed)</span></h3>
+                            
+                        </div>
+                    </article>
 
-                <div class="col-lg-6">
-                    <h3 class="resume-title">Professional Experience</h3>
-                    
-                    <div class="resume-item">
-                        <h4>Hidden</h4>
-                        <h5>Jul. 2026 - Present</h5>
-                        <p><em>Remote</em></p>
-                        <p>
-                        <dl class="list-group list-group-flush">
+                    <article class="job">
+                        <div class="job-when">
+                            <span class="period">Sep. 2024 - Present</span><br>
+                            <span>Zębowice, Poland</span>
+                        </div>
+                        <div>
+                            <h3>Founder and Engineer <span>/ Ploryn AgroTech</span></h3>
                             
-                        </dl>
-                        </p>
-                    </div>
-                    
-                    <div class="resume-item">
-                        <h4>Ploryn AgroTech</h4>
-                        <h5>Sep. 2024 - Present</h5>
-                        <p><em>Zębowice, Poland</em></p>
-                        <p>
-                        <dl class="list-group list-group-flush">
-                            
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project10Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project10Collapse">
-                                    Farm management platform
-                                </a>
-                                <div class="collapse" id="project10Collapse">
+                            <div class="project">
+                                <h4><a href="https://ploryn.pl" rel="noopener" target="_blank">Farm management platform</a></h4>
+                                <p class="tech">Go · React · PostgresDB · OVH · Docker</p>
+                                
+                                <ul class="duties">
+                                    <li>Building a free farm management web app (PWA) from scratch: fields with maps, treatment logs, harvests, warehouse, soil tests and compliance reports</li>
+                                    <li>Integrating public agricultural data: ARiMR eWniosek import, IMGW weather, GUGiK orthophotos, MATIF prices and the MRiRW plant protection register</li>
+                                    <li>Running a grain purchase price tracker across Polish buyers with price alerts</li>
+                                    <li>Adding an AI advisor over farm data and an MCP server for AI assistants</li>
                                     
-                                    <p><strong>Technologies:</strong> Go, React</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Building a free farm management web app (PWA) from scratch: fields with maps, treatment logs, harvests, warehouse, soil tests and compliance reports</li>
-                                        
-                                        <li>Integrating public agricultural data: ARiMR eWniosek import, IMGW weather, GUGiK orthophotos, MATIF prices and the MRiRW plant protection register</li>
-                                        
-                                        <li>Running a grain purchase price tracker across Polish buyers with price alerts</li>
-                                        
-                                        <li>Adding an AI advisor over farm data and an MCP server for AI assistants</li>
-                                        
+                                </ul>
+                                
+                                <details class="more">
+                                    <summary>+ 1 more</summary>
+                                    <ul class="duties">
                                         <li>Platform used by 250+ farms registered only in the first 3 months</li>
                                         
                                     </ul>
-                                    
-                                    
-                                    <p><strong>Tools:</strong> Docker</p>
-                                    
-                                    
-                                    <p><strong>Databases:</strong> PostgresDB</p>
-                                    
-                                    
-                                    <p><strong>Cloud:</strong> OVH</p>
-                                    
-                                </div>
-                            </dt>
+                                </details>
+                                
+                                
+                            </div>
                             
-                        </dl>
-                        </p>
-                    </div>
+                        </div>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-when">
+                            <span class="period">Jun. 2010 - Present</span><br>
+                            <span>Zębowice, Poland</span>
+                        </div>
+                        <div>
+                            <h3>Co-owner <span>/ Family farm</span></h3>
+                            
+                            <div class="project">
+                                <h4>Crop production</h4>
+                                <p class="tech">integrated production · JD tractors :D</p>
+                                
+                                <ul class="duties">
+                                    <li>Starting Integrated Production in crops</li>
+                                    <li>Using modern technologies in farming</li>
+                                    <li>Operating agricultural machinery</li>
+                                    
+                                </ul>
+                                
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+
+                </div>
+                <p class="group-label"><span>Before</span></p>
+                <div class="jobs">
                     
-                    <div class="resume-item">
-                        <h4>Family farming</h4>
-                        <h5>Jun. 2010 - Present</h5>
-                        <p><em>Zębowice, Poland</em></p>
-                        <p>
-                        <dl class="list-group list-group-flush">
+                    <article class="job">
+                        <div class="job-when">
+                            <span class="period">Mar. 2023 - Sep. 2024</span><br>
+                            <span>Remote</span>
+                        </div>
+                        <div>
+                            <h3>Senior Backend Engineer <span>/ rift</span></h3>
                             
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project20Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project20Collapse">
-                                    Crop production
-                                </a>
-                                <div class="collapse" id="project20Collapse">
+                            <div class="project">
+                                <h4>Scheduling</h4>
+                                <p class="tech">Go · React</p>
+                                
+                                <ul class="duties">
+                                    <li>Providing platform core - scheduling algorithm</li>
+                                    <li>Working as full-stack: frontend, backend and ops</li>
                                     
-                                    <p><strong>Technologies:</strong> integrated production</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Starting Integrated Production in crops</li>
-                                        
-                                        <li>Using modern technologies in farming</li>
-                                        
-                                        <li>Operating agricultural machinery</li>
-                                        
-                                    </ul>
-                                    
-                                    
-                                    <p><strong>Tools:</strong> JD tractors :D</p>
-                                    
-                                    
-                                    
-                                </div>
-                            </dt>
+                                </ul>
+                                
+                                
+                            </div>
                             
-                        </dl>
-                        </p>
-                    </div>
-                    
-                    <div class="resume-item">
-                        <h4>rift</h4>
-                        <h5>Mar. 2023 - Sep. 2024</h5>
-                        <p><em>Remote</em></p>
-                        <p>
-                        <dl class="list-group list-group-flush">
+                            <div class="project">
+                                <h4>Platform</h4>
+                                <p class="tech">Go · React · PostgresDB · Redis · GCP · DataDog · Kubernetes · GKE · Terraform</p>
+                                
+                                <ul class="duties">
+                                    <li>Providing limits-friendly integrations with Hubspot/Salesforce/Zapier</li>
+                                    <li>Provide app deployment in GKE cluster</li>
+                                    <li>Setup Caddy as custom loadbalancer with automatic SSL</li>
+                                    
+                                </ul>
+                                
+                                
+                            </div>
                             
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project30Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project30Collapse">
-                                    Scheduling
-                                </a>
-                                <div class="collapse" id="project30Collapse">
-                                    
-                                    <p><strong>Technologies:</strong> Go, React</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Providing platform core - scheduling algorithm</li>
-                                        
-                                        <li>Working as full-stack: frontend, backend and ops</li>
-                                        
-                                    </ul>
-                                    
-                                    
-                                    
-                                    
-                                </div>
-                            </dt>
+                        </div>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-when">
+                            <span class="period">Feb. 2022 - Mar. 2023</span><br>
+                            <span>Remote</span>
+                        </div>
+                        <div>
+                            <h3>Senior Backend Engineer <span>/ Smallpdf</span></h3>
                             
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project31Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project31Collapse">
-                                    Platform
-                                </a>
-                                <div class="collapse" id="project31Collapse">
+                            <div class="project">
+                                <h4>eSign tool</h4>
+                                <p class="tech">Go · PostgresDB · Redis · AWS · DataDog · Kubernetes · AWS S3 · Terraform</p>
+                                
+                                <ul class="duties">
+                                    <li>Introducing Golang best practices</li>
+                                    <li>Providing eventsourcing based service</li>
+                                    <li>Introducing DataDog tracing and service monitoring</li>
                                     
-                                    <p><strong>Technologies:</strong> Go, React</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Providing limits-friendly integrations with Hubspot/Salesforce/Zapier</li>
-                                        
-                                        <li>Provide app deployment in GKE cluster</li>
-                                        
-                                        <li>Setup Caddy as custom loadbalancer with automatic SSL</li>
-                                        
-                                    </ul>
-                                    
-                                    
-                                    <p><strong>Tools:</strong> DataDog, Kubernetes, GKE, Terraform</p>
-                                    
-                                    
-                                    <p><strong>Databases:</strong> PostgresDB, Redis</p>
-                                    
-                                    
-                                    <p><strong>Cloud:</strong> GCP</p>
-                                    
-                                </div>
-                            </dt>
+                                </ul>
+                                
+                                
+                            </div>
                             
-                        </dl>
-                        </p>
-                    </div>
-                    
-                    <div class="resume-item">
-                        <h4>Smallpdf</h4>
-                        <h5>Feb. 2022 - Mar. 2023</h5>
-                        <p><em>Remote</em></p>
-                        <p>
-                        <dl class="list-group list-group-flush">
+                        </div>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-when">
+                            <span class="period">Jun. 2021 - Jul. 2021</span><br>
+                            <span>Remote</span>
+                        </div>
+                        <div>
+                            <h3>Software Developer <span>/ IQVIA</span></h3>
                             
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project40Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project40Collapse">
-                                    eSign tool
-                                </a>
-                                <div class="collapse" id="project40Collapse">
+                            <div class="project">
+                                <h4>NDA</h4>
+                                <p class="tech">Go · Elasticsearch · DataDog</p>
+                                
+                                <ul class="duties">
+                                    <li>Fixing golang repositories</li>
+                                    <li>Adding coding standards with golangci-lint in gitlab pipelines</li>
+                                    <li>Working on elasticsearch based service</li>
+                                    <li>Doing security upgrades</li>
                                     
-                                    <p><strong>Technologies:</strong> Go</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Introducing Golang best practices</li>
-                                        
-                                        <li>Providing eventsourcing based service</li>
-                                        
-                                        <li>Introducing DataDog tracing and service monitoring</li>
-                                        
-                                    </ul>
-                                    
-                                    
-                                    <p><strong>Tools:</strong> DataDog, Kubernetes, AWS S3, Terraform</p>
-                                    
-                                    
-                                    <p><strong>Databases:</strong> PostgresDB, Redis</p>
-                                    
-                                    
-                                    <p><strong>Cloud:</strong> AWS</p>
-                                    
-                                </div>
-                            </dt>
-                            
-                        </dl>
-                        </p>
-                    </div>
-                    
-                    <div class="resume-item">
-                        <h4>IQVIA</h4>
-                        <h5>Jun. 2021 - Jul. 2021</h5>
-                        <p><em>Remote</em></p>
-                        <p>
-                        <dl class="list-group list-group-flush">
-                            
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project50Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project50Collapse">
-                                    NDA
-                                </a>
-                                <div class="collapse" id="project50Collapse">
-                                    
-                                    <p><strong>Technologies:</strong> Go</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Fixing golang repositories</li>
-                                        
-                                        <li>Adding coding standards with golangci-lint in gitlab pipelines</li>
-                                        
-                                        <li>Working on elasticsearch based service</li>
-                                        
-                                        <li>Doing security upgrades</li>
-                                        
+                                </ul>
+                                
+                                <details class="more">
+                                    <summary>+ 1 more</summary>
+                                    <ul class="duties">
                                         <li>Introducing application monitoring</li>
                                         
                                     </ul>
-                                    
-                                    
-                                    <p><strong>Tools:</strong> DataDog</p>
-                                    
-                                    
-                                    <p><strong>Databases:</strong> Elasticsearch</p>
-                                    
-                                    
-                                </div>
-                            </dt>
+                                </details>
+                                
+                                
+                            </div>
                             
-                        </dl>
-                        </p>
-                    </div>
-                    
-                    <div class="resume-item">
-                        <h4>Nomtek</h4>
-                        <h5>Oct. 2019 - Jun. 2021</h5>
-                        <p><em>Remote/Wrocław, Poland</em></p>
-                        <p>
-                        <dl class="list-group list-group-flush">
+                        </div>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-when">
+                            <span class="period">Oct. 2019 - Jun. 2021</span><br>
+                            <span>Remote/Wrocław, Poland</span>
+                        </div>
+                        <div>
+                            <h3>Software Developer <span>/ Nomtek</span></h3>
                             
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project60Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project60Collapse">
-                                    NDA
-                                </a>
-                                <div class="collapse" id="project60Collapse">
+                            <div class="project">
+                                <h4>NDA</h4>
+                                <p class="tech">Go · Java · Python · Bash · Chef · Terraform · Scylla · Aurora/MySQL · DynamoDB · AWS · DataDog</p>
+                                
+                                <ul class="duties">
+                                    <li>Develop Golang: REST APIs, data processors, job scripts, mobile push service</li>
+                                    <li>Develop Java: data importer, REST APIs</li>
+                                    <li>Develop Python: data logs analyzer/processor based on Datadog API</li>
+                                    <li>Using AWS services: Lambda, EC2 boxes, Fargate, Batch, SNS, SQS, S3</li>
                                     
-                                    <p><strong>Technologies:</strong> Go, Java, Python, Bash, Chef, Terraform</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Develop Golang: REST APIs, data processors, job scripts, mobile push service</li>
-                                        
-                                        <li>Develop Java: data importer, REST APIs</li>
-                                        
-                                        <li>Develop Python: data logs analyzer/processor based on Datadog API</li>
-                                        
-                                        <li>Using AWS services: Lambda, EC2 boxes, Fargate, Batch, SNS, SQS, S3</li>
-                                        
+                                </ul>
+                                
+                                <details class="more">
+                                    <summary>+ 7 more</summary>
+                                    <ul class="duties">
                                         <li>Integrating login with Apple in Golang service</li>
-                                        
                                         <li>Maintain Scylla cluster</li>
-                                        
                                         <li>Improve monitoring (tracing, logging, metrics, alerts)</li>
-                                        
                                         <li>Maintain stack with Chef and infrastructure with Terraform</li>
-                                        
                                         <li>Improve database indexes and queries with performance upgrades of 4x</li>
-                                        
                                         <li>Provide on-call service</li>
-                                        
                                         <li>Work in multi-timezone/multicultural environment</li>
                                         
                                     </ul>
-                                    
-                                    
-                                    <p><strong>Tools:</strong> DataDog</p>
-                                    
-                                    
-                                    <p><strong>Databases:</strong> Scylla, Aurora/MySQL, DynamoDB</p>
-                                    
-                                    
-                                    <p><strong>Cloud:</strong> AWS</p>
-                                    
-                                </div>
-                            </dt>
+                                </details>
+                                
+                                
+                            </div>
                             
-                        </dl>
-                        </p>
-                    </div>
-                    
-                    <div class="resume-item">
-                        <h4>Opera Software AS</h4>
-                        <h5>Jun. 2018 - Oct. 2019</h5>
-                        <p><em>Remote/Wrocław, Poland</em></p>
-                        <p>
-                        <dl class="list-group list-group-flush">
+                        </div>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-when">
+                            <span class="period">Jun. 2018 - Oct. 2019</span><br>
+                            <span>Remote/Wrocław, Poland</span>
+                        </div>
+                        <div>
+                            <h3>Software Developer <span>/ Opera Software AS</span></h3>
                             
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project70Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project70Collapse">
-                                    VPN
-                                </a>
-                                <div class="collapse" id="project70Collapse">
+                            <div class="project">
+                                <h4><a href="https://www.opera.com/computer/features/free-vpn" rel="noopener" target="_blank">VPN</a></h4>
+                                <p class="tech">Go · Python · Docker · Ansible · Docker Swarm</p>
+                                
+                                <ul class="duties">
+                                    <li>Develop Golang: security and performance patches to VPN, caching library</li>
+                                    <li>Develop Python: deployment tools</li>
+                                    <li>Investigating security/performance/networking incidents</li>
+                                    <li>Doing system and cluster upgrades with service 0-downtime</li>
                                     
-                                    <p><strong>Technologies:</strong> Go, Python</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Develop Golang: security and performance patches to VPN, caching library</li>
-                                        
-                                        <li>Develop Python: deployment tools</li>
-                                        
-                                        <li>Investigating security/performance/networking incidents</li>
-                                        
-                                        <li>Doing system and cluster upgrades with service 0-downtime</li>
-                                        
+                                </ul>
+                                
+                                <details class="more">
+                                    <summary>+ 2 more</summary>
+                                    <ul class="duties">
                                         <li>Data analyzing and improving Linux system/network performance</li>
-                                        
                                         <li>Maintain Docker swarm cluster</li>
                                         
                                     </ul>
-                                    
-                                    
-                                    <p><strong>Tools:</strong> Docker, Ansible, Docker Swarm</p>
-                                    
-                                    
-                                    
-                                </div>
-                            </dt>
+                                </details>
+                                
+                                
+                            </div>
                             
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project71Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project71Collapse">
-                                    Monitoring and alerting system
-                                </a>
-                                <div class="collapse" id="project71Collapse">
+                            <div class="project">
+                                <h4>Monitoring and alerting system</h4>
+                                <p class="tech">Bash · Docker · Ansible · Grafana · Prometheus · Alertmanager</p>
+                                
+                                <ul class="duties">
+                                    <li>Bootstrap Prometheus based alert system for company services</li>
+                                    <li>Providing CI/CD gitlab integration for deployment in multiple environments</li>
+                                    <li>Integrating monitoring with company services</li>
+                                    <li>Tutoring other employees on alert creations</li>
                                     
-                                    <p><strong>Technologies:</strong> Bash</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Bootstrap Prometheus based alert system for company services</li>
-                                        
-                                        <li>Providing CI/CD gitlab integration for deployment in multiple environments</li>
-                                        
-                                        <li>Integrating monitoring with company services</li>
-                                        
-                                        <li>Tutoring other employees on alert creations</li>
-                                        
-                                    </ul>
-                                    
-                                    
-                                    <p><strong>Tools:</strong> Docker, Ansible, Grafana, Prometheus, Alertmanager</p>
-                                    
-                                    
-                                    
-                                </div>
-                            </dt>
+                                </ul>
+                                
+                                
+                            </div>
                             
-                        </dl>
-                        </p>
+                        </div>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-when">
+                            <span class="period">Jul. 2017 - Sep. 2017</span><br>
+                            <span>Gdańsk, Poland</span>
+                        </div>
+                        <div>
+                            <h3>Software Developer Intern in Cloud Computing <span>/ Intel Corporation</span></h3>
+                            
+                            <div class="project">
+                                <h4>Dmidecode plugin</h4>
+                                <p class="tech">Go</p>
+                                
+                                <ul class="duties">
+                                    <li>Develop Golang: dmidecode plugin based on dmidecode tool</li>
+                                    
+                                </ul>
+                                
+                                
+                            </div>
+                            
+                            <div class="project">
+                                <h4>Snap metric catalog</h4>
+                                <p class="tech">Python · Docker</p>
+                                
+                                <ul class="duties">
+                                    <li>Develop Python: Github repos parser and data processor</li>
+                                    <li>Leading a 3-person project</li>
+                                    
+                                </ul>
+                                
+                                
+                            </div>
+                            
+                            <div class="project">
+                                <h4><a href="https://github.com/intelsdi-x/snap" rel="noopener" target="_blank">Snap Telemetry</a></h4>
+                                <p class="tech">Python · Go · Bash · Docker</p>
+                                
+                                <ul class="duties">
+                                    <li>Develop Golang: integration and unit tests, patching bugs</li>
+                                    <li>Testing plugins on various Linux distributions</li>
+                                    
+                                </ul>
+                                
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="background">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Background</h2>
+                </div>
+                <div class="facts">
+                    <div>
+                        <h3>Education</h3>
+                        <ul>
+                            
+                            <li>
+                                <strong>Agricultural qualifications</strong>
+                                <small>Centrum Kształcenia Rolniczego w Mokrzeszowie &middot; 2019 - 2020</small>
+                                
+                            </li>
+                            
+                            <li>
+                                <strong>Bachelor of Engineering in Computer Science</strong>
+                                <small>Faculty of Fundamental Problems of Technology, Wrocław University of Science and Technology &middot; 2014 - 2018</small>
+                                <small>Thesis: Position Based Messenger</small>
+                            </li>
+                            
+                        </ul>
+                        <p class="aside">Used to do some Math. Also a <a href="https://lwiatko.org/o-konkursie">Taon</a>.</p>
+                    </div>
+                    <div>
+                        <h3>Languages</h3>
+                        <ul class="inline">
+                            
+                            <li>English<span class="level">intermediate</span></li>
+                            
+                            <li>Polish<span class="level">native</span></li>
+                            
+                        </ul>
+                        <p class="aside tech">Golang &gt; C &gt; Prolog &gt; Python</p>
+                    </div>
+                    <div>
+                        <h3>Off the clock</h3>
+                        <ul class="inline">
+                            
+                            <li><i class="ri-plant-line" aria-hidden="true"></i>Farming</li>
+                            
+                            <li><i class="ri-file-code-line" aria-hidden="true"></i>Coding challenges</li>
+                            
+                            <li><i class="ri-windy-line" aria-hidden="true"></i><a href="./surfing.html">Windsurfing</a></li>
+                            
+                            <li><i class="ri-artboard-2-line" aria-hidden="true"></i><a href="https://www.chess.com/member/armatorix">Chess</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Projects</h2>
+                </div>
+                
+                <div class="flagship">
+                    <div>
+                        <p class="tech">Go · React · PostgresDB</p>
+                        <h3>Ploryn</h3>
+                        <p>Free farm management platform for Polish farmers. Fields with maps, treatment logs, harvests, warehouse, reports, grain purchase prices and an AI advisor, with an MCP server for AI assistants.</p>
+                    </div>
+                    <a class="btn primary" href="https://ploryn.pl" rel="noopener" target="_blank">Visit<i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                </div>
+                
+                <div class="project-list">
+                    
+                    <a class="project-row" href="https://github.com/Armatorix/TelegramOrganizationSync" rel="noopener" target="_blank">
+                        <h3>Telegram organization sync</h3>
+                        <p>Go daemon built on TDLib that keeps Telegram channel membership in sync with an organization server. Ships an OpenAPI contract and a dev server with admin UI.</p>
+                        <span class="tech">Go · TDLib · OpenAPI</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a class="project-row" href="https://github.com/Armatorix/GoRetro" rel="noopener" target="_blank">
+                        <h3>GoRetro</h3>
+                        <p>Agile sprint retrospective tool with multi-phase flow, real-time collaboration over WebSockets and optional AI auto-merge of similar tickets and action proposals. Designed to run behind an OAuth2 proxy.</p>
+                        <span class="tech">Go · React · PostgresDB · Redis · WebSockets · oauth2-proxy</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a class="project-row" href="https://github.com/Armatorix/GoPress" rel="noopener" target="_blank">
+                        <h3>GoPress</h3>
+                        <p>Lightweight CMS written in Go with an admin panel, markdown editor with preview, RSS feed and article view analytics.</p>
+                        <span class="tech">Go · TypeScript · PostgresDB</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a class="project-row" href="https://ai-mma.dev/" rel="noopener" target="_blank">
+                        <h3>AI MMA</h3>
+                        <p>Service with ML predictions for MMA fights. Co-created with Data Scientists</p>
+                        <span class="tech">Astro · Go</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a class="project-row" href="https://github.com/Armatorix/smallpaf" rel="noopener" target="_blank">
+                        <h3>SmallPAF (Planning Async Format)</h3>
+                        <p>Tool for async ticket estimations</p>
+                        <span class="tech">React · Go</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a class="project-row" href="https://me.wsokol.dev/hearing" rel="noopener" target="_blank">
+                        <h3>Hearing app</h3>
+                        <p>Simple tool that helps verify frequency range of hearing</p>
+                        <span class="tech">React</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a class="project-row" href="https://github.com/Armatorix/enumgen" rel="noopener" target="_blank">
+                        <h3>Go code generators</h3>
+                        <p>enumgen adds String, JSON marshalling and validation methods to Go constant types. ddwrap wraps interfaces with Datadog tracing spans.</p>
+                        <span class="tech">Go</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a class="project-row" href="https://github.com/Armatorix/OBSOverlays" rel="noopener" target="_blank">
+                        <h3>Chess.com updater</h3>
+                        <p>Simple service with users live stats for OBS usage</p>
+                        <span class="tech">HTML · jQuery</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <div class="project-row">
+                        <h3>Wagapp</h3>
+                        <p>Web app for car weight. Simple CRUD, integrated with przelewy24.pl and Auth0</p>
+                        <span class="tech">React · Go · PostgresDB</span>
+                        <span class="ext"></span>
                     </div>
                     
-                    <div class="resume-item">
-                        <h4>Intel Corporation</h4>
-                        <h5>Jul. 2017 - Sep. 2017</h5>
-                        <p><em>Gdańsk, Poland</em></p>
-                        <p>
-                        <dl class="list-group list-group-flush">
-                            
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project80Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project80Collapse">
-                                    Dmidecode plugin
-                                </a>
-                                <div class="collapse" id="project80Collapse">
-                                    
-                                    <p><strong>Technologies:</strong> Go</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Develop Golang: dmidecode plugin based on dmidecode tool</li>
-                                        
-                                    </ul>
-                                    
-                                    
-                                    
-                                    
-                                </div>
-                            </dt>
-                            
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project81Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project81Collapse">
-                                    Snap metric catalog
-                                </a>
-                                <div class="collapse" id="project81Collapse">
-                                    
-                                    <p><strong>Technologies:</strong> Python</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Develop Python: Github repos parser and data processor</li>
-                                        
-                                        <li>Leading a 3-person project</li>
-                                        
-                                    </ul>
-                                    
-                                    
-                                    <p><strong>Tools:</strong> Docker</p>
-                                    
-                                    
-                                    
-                                </div>
-                            </dt>
-                            
-                            <dt class="list-group-item"><a class="btn btn-success" data-bs-toggle="collapse"
-                                    href="#project82Collapse" role="button" aria-expanded="false"
-                                    aria-controls="project82Collapse">
-                                    Snap Telemetry
-                                </a>
-                                <div class="collapse" id="project82Collapse">
-                                    
-                                    <p><strong>Technologies:</strong> Python, Go, Bash</p>
-                                    
-                                    
-                                    <ul>
-                                        
-                                        <li>Develop Golang: integration and unit tests, patching bugs</li>
-                                        
-                                        <li>Testing plugins on various Linux distributions</li>
-                                        
-                                    </ul>
-                                    
-                                    
-                                    <p><strong>Tools:</strong> Docker</p>
-                                    
-                                    
-                                    
-                                </div>
-                            </dt>
-                            
-                        </dl>
-                        </p>
+                    <a class="project-row" href="https://github.com/Armatorix/WeatherSystem" rel="noopener" target="_blank">
+                        <h3>Temperature monitoring system</h3>
+                        <p>Wireless temperature monitoring with Raspberry Pi and ESP8266+BME280. Prometheus with Pushgateway as main services</p>
+                        <span class="tech">C · Prometheus · Grafana</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <div class="project-row">
+                        <h3>Simple imperative language compilers</h3>
+                        <p>University project of compiler that generates machine code. First created was 4th in terms of performance on the yearbook. Wrote already 4 of them based on different specifications</p>
+                        <span class="tech">C · Flex · Bison</span>
+                        <span class="ext"></span>
                     </div>
+                    
+                    <a class="project-row" href="https://github.com/Armatorix/BitLyke" rel="noopener" target="_blank">
+                        <h3>Bitlyke</h3>
+                        <p>Bit.ly like URL shortener. Simple REST API with basic analytics.</p>
+                        <span class="tech">Go</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a class="project-row" href="https://github.com/Armatorix/SlackUp" rel="noopener" target="_blank">
+                        <h3>SlackUp</h3>
+                        <p>Slack report generator. Generates daily reports with random work and progress.</p>
+                        <span class="tech">Go</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a class="project-row" href="https://github.com/Armatorix/discordbot-ramen" rel="noopener" target="_blank">
+                        <h3>Discord bot</h3>
+                        <p>Python bot for spamming random google search images when using keywords.</p>
+                        <span class="tech">Python</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a class="project-row" href="https://github.com/Armatorix/jh" rel="noopener" target="_blank">
+                        <h3>JH</h3>
+                        <p>JQ like CLI tool for HTML except JSON. Crafted for personal usage.</p>
+                        <span class="tech">Go</span>
+                        <span class="ext"><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span>
+                    </a>
                     
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="projects" class="projects">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Projects</h2>
-                <p>My projects</p>
-            </div>
-            <div class="row">
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://ploryn.pl">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-plant-line"></i></div>
-                            <h4>Ploryn</h4>
-                            <p>Free farm management platform for Polish farmers. Fields with maps, treatment logs, harvests, warehouse, reports, grain purchase prices and an AI advisor, with an MCP server for AI assistants.</p>
-                        </div>
-                    </a>
+        <section id="contact">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Contact</h2>
                 </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/TelegramOrganizationSync">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-telegram-line"></i></div>
-                            <h4>Telegram organization sync</h4>
-                            <p>Go daemon built on TDLib that keeps Telegram channel membership in sync with an organization server. Ships an OpenAPI contract and a dev server with admin UI.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/GoRetro">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-history-line"></i></div>
-                            <h4>GoRetro</h4>
-                            <p>Agile sprint retrospective tool with multi-phase flow, real-time collaboration over WebSockets and optional AI auto-merge of similar tickets and action proposals. Designed to run behind an OAuth2 proxy.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/GoPress">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-markdown-line"></i></div>
-                            <h4>GoPress</h4>
-                            <p>Lightweight CMS written in Go with an admin panel, markdown editor with preview, RSS feed and article view analytics.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://ai-mma.dev/">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-line-chart-line"></i></div>
-                            <h4>AI MMA</h4>
-                            <p>Service with ML predictions for MMA fights. Co-created with Data Scientists</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/smallpaf">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-numbers-fill"></i></div>
-                            <h4>SmallPAF (Planning Async Format)</h4>
-                            <p>Tool for async ticket estimations</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://me.wsokol.dev/hearing">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-volume-full"></i></div>
-                            <h4>Hearing app</h4>
-                            <p>Simple tool that helps verify frequency range of hearing</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/enumgen">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-code-s-slash-line"></i></div>
-                            <h4>Go code generators</h4>
-                            <p>enumgen adds String, JSON marshalling and validation methods to Go constant types. ddwrap wraps interfaces with Datadog tracing spans.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/OBSOverlays">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-line-chart-line"></i></div>
-                            <h4>Chess.com updater</h4>
-                            <p>Simple service with users live stats for OBS usage</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="#">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4>Wagapp</h4>
-                            <p>Web app for car weight. Simple CRUD, integrated with przelewy24.pl and Auth0</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/WeatherSystem">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-raspberry-pi-line"></i></div>
-                            <h4>Temperature monitoring system</h4>
-                            <p>Wireless temperature monitoring with Raspberry Pi and ESP8266+BME280. Prometheus with Pushgateway as main services</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="#">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-code-block"></i></div>
-                            <h4>Simple imperative language compilers</h4>
-                            <p>University project of compiler that generates machine code. First created was 4th in terms of performance on the yearbook. Wrote already 4 of them based on different specifications</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/BitLyke">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-link"></i></div>
-                            <h4>Bitlyke</h4>
-                            <p>Bit.ly like URL shortener. Simple REST API with basic analytics.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/SlackUp">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-slack-line"></i></div>
-                            <h4>SlackUp</h4>
-                            <p>Slack report generator. Generates daily reports with random work and progress.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/discordbot-ramen">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-discord-line"></i></div>
-                            <h4>Discord bot</h4>
-                            <p>Python bot for spamming random google search images when using keywords.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <a href="https://github.com/Armatorix/jh">
-                        <div class="icon-box">
-                            <div class="icon"><i class="ri-html5-fill"></i></div>
-                            <h4>JH</h4>
-                            <p>JQ like CLI tool for HTML except JSON. Crafted for personal usage.</p>
-                        </div>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Contact</h2>
-                <p>Contact Me</p>
-            </div>
-
-            <div class="row mt-2">
-
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-map"></i>
-                        <h3>My Address</h3>
-                        <p>Zębowice, Poland</p>
+                <div class="contact">
+                    <div>
+                        <dl>
+                            <dt>Email</dt>
+                            <dd class="big"><a href="mailto:sokolwojtek1@gmail.com">sokolwojtek1@gmail.com</a></dd>
+                            <dt>Phone</dt>
+                            <dd><a href="tel:+48725205367">+48 725 205 367</a></dd>
+                            <dt>Location</dt>
+                            <dd>Zębowice, Poland</dd>
+                            <dt>Freelance</dt>
+                            <dd>Available</dd>
+                        </dl>
                     </div>
-                </div>
-
-                <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-share-alt"></i>
-                        <h3>Social Profiles</h3>
-                        <div class="social-links">
+                    <div>
+                        <div class="socials">
                             
+                            <a href="https://x.com/Armatorix" class="x" title="twitter.com" rel="noopener me" target="_blank"><i class="bi bi-twitter" aria-hidden="true"></i>X</a>
                             
-                            <a href="https://x.com/Armatorix" class="x" title="twitter.com" rel="noopener me" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/Armatorix" class="linkedin" title="linkedin.com" rel="noopener me" target="_blank"><i class="bi bi-linkedin" aria-hidden="true"></i>LinkedIn</a>
                             
+                            <a href="https://github.com/Armatorix" class="github" title="github.com" rel="noopener me" target="_blank"><i class="bi bi-github" aria-hidden="true"></i>GitHub</a>
                             
+                            <a href="https://stackoverflow.com/users/6107031/armatorix" class="stackoverflow" title="stackoverflow.com" rel="noopener me" target="_blank"><i class="ri-stack-overflow-line" aria-hidden="true"></i>StackOverflow</a>
                             
-                            <a href="https://www.linkedin.com/in/Armatorix" class="linkedin" title="linkedin.com" rel="noopener me" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.hackerrank.com/profile/sokolwojtek1" class="hackerrank" title="hackerrank.com" rel="noopener me" target="_blank"><img src="./assets/img/hackerrank.png" alt="" loading="lazy" decoding="async">HackerRank</a>
                             
+                            <a href="https://www.codewars.com/users/Armatorix" class="codewars" title="codewars.com" rel="noopener me" target="_blank"><img src="./assets/img/codewars.svg" alt="" loading="lazy" decoding="async">Codewars</a>
                             
+                            <a href="https://codeforces.com/profile/armatorix" class="codeforces" title="codeforces.com" rel="noopener me" target="_blank"><img src="./assets/img/codeforces.svg" alt="" loading="lazy" decoding="async">Codeforces</a>
                             
-                            <a href="https://github.com/Armatorix" class="github" title="github.com" rel="noopener me" target="_blank"><i class="bi bi-github"></i></a>
+                            <a href="https://www.chess.com/member/armatorix" class="chess.com" title="chess.com" rel="noopener me" target="_blank"><img src="./assets/img/chesscom.png" alt="" loading="lazy" decoding="async">Chess.com</a>
                             
+                            <a href="https://lichess.org/@/armatorix" class="lichess" title="lichess.org" rel="noopener me" target="_blank"><img src="./assets/img/lichess.svg" alt="" loading="lazy" decoding="async">Lichess</a>
                             
-                            
-                            <a href="https://stackoverflow.com/users/6107031/armatorix" class="stackoverflow" title="stackoverflow.com" rel="noopener me" target="_blank"><i class="ri-stack-overflow-line"></i></a>
-                            
-                            
-                            
-                            <a href="https://www.hackerrank.com/profile/sokolwojtek1" class="hackerrank" title="hackerrank.com" rel="noopener me" target="_blank"><img src="./assets/img/hackerrank.png" height="18px" alt="hackerrank.com" loading="lazy" decoding="async"></a>
-                            
-                            
-                            
-                            <a href="https://www.codewars.com/users/Armatorix" class="codewars" title="codewars.com" rel="noopener me" target="_blank"><img src="./assets/img/codewars.svg" height="18px" alt="codewars.com" loading="lazy" decoding="async"></a>
-                            
-                            
-                            
-                            <a href="https://codeforces.com/profile/armatorix" class="codeforces" title="codeforces.com" rel="noopener me" target="_blank"><img src="./assets/img/codeforces.svg" height="18px" alt="codeforces.com" loading="lazy" decoding="async"></a>
-                            
-                            
-                            
-                            <a href="https://www.chess.com/member/armatorix" class="chess.com" title="chess.com" rel="noopener me" target="_blank"><img src="./assets/img/chesscom.png" height="18px" alt="chess.com" loading="lazy" decoding="async"></a>
-                            
-                            
-                            
-                            <a href="https://lichess.org/@/armatorix" class="lichess" title="lichess.org" rel="noopener me" target="_blank"><img src="./assets/img/lichess.svg" height="18px" alt="lichess.org" loading="lazy" decoding="async"></a>
-                            
-                            
-                            
-                            <a href="https://www.thingiverse.com/Armatorix" class="thingiverse" title="thingiverse.com" rel="noopener me" target="_blank"><img src="./assets/img/thingiverse.png" height="18px" alt="thingiverse.com" loading="lazy" decoding="async"></a>
-                            
+                            <a href="https://www.thingiverse.com/Armatorix" class="thingiverse" title="thingiverse.com" rel="noopener me" target="_blank"><img src="./assets/img/thingiverse.png" alt="" loading="lazy" decoding="async">Thingiverse</a>
                             
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-envelope"></i>
-                        <h3>Email Me</h3>
-                        <p>sokolwojtek1@gmail.com</p>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                    <div class="info-box">
-                        <i class="bx bx-phone-call"></i>
-                        <h3>Call Me</h3>
-                        <p>+48 725 205 367</p>
-                    </div>
-                </div>
             </div>
+        </section>
 
-        </div>
-    </section><!-- End Contact Section -->
+    </main>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <footer>
+        <div class="wrap">Wojciech Sokołowski &middot; built from one JSON file with Go &middot; <a href="https://github.com/Armatorix/armatorix.github.io">source</a></div>
+    </footer>
 
-    <!-- Matrix background effect -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js" defer></script>
-    <script src="assets/js/matrix.js" defer></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js" defer></script>
+    <script>
+        document.querySelector('.theme-toggle').addEventListener('click', function () {
+            var root = document.documentElement;
+            var dark = root.dataset.theme
+                ? root.dataset.theme === 'dark'
+                : window.matchMedia('(prefers-color-scheme: dark)').matches;
+            root.dataset.theme = dark ? 'light' : 'dark';
+            try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+        });
+    </script>
 
 </body>
 
 </html>
+
+

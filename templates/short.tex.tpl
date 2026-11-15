@@ -17,15 +17,15 @@
 
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
-\definecolor{DarkPastelRed}{HTML}{450808}
-\definecolor{PastelRed}{HTML}{8F0D0D}
-\definecolor{GoldenEarth}{HTML}{E7D192}
+\definecolor{DeepGreen}{HTML}{1F4F20}
+\definecolor{FieldGreen}{HTML}{2C6A2B}
+\definecolor{Wheat}{HTML}{F2C417}
 \colorlet{name}{black}
-\colorlet{tagline}{PastelRed}
-\colorlet{heading}{DarkPastelRed}
-\colorlet{headingrule}{GoldenEarth}
-\colorlet{subheading}{PastelRed}
-\colorlet{accent}{PastelRed}
+\colorlet{tagline}{FieldGreen}
+\colorlet{heading}{DeepGreen}
+\colorlet{headingrule}{Wheat}
+\colorlet{subheading}{FieldGreen}
+\colorlet{accent}{FieldGreen}
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
