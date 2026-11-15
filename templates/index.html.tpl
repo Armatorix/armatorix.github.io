@@ -325,8 +325,10 @@
                         <h3>Social Profiles</h3>
                         <div class="social-links">
                             {{range .Social}}
-                            {{if eq .Name "LinkedIn"}}
-                            <a href="{{.URL}}" class="linkedin"><i class="{{.Icon}}"></i></a>
+                            {{if .Icon}}
+                            <a href="{{.URL}}" class="{{.Name | lower}}" title="{{.Title}}" rel="noopener me" target="_blank"><i class="{{.Icon}}"></i></a>
+                            {{else if .IconImage}}
+                            <a href="{{.URL}}" class="{{.Name | lower}}" title="{{.Title}}" rel="noopener me" target="_blank"><img src="{{.IconImage}}" height="{{.IconHeight}}" alt="{{.Title}}" loading="lazy" decoding="async"{{if .IconStyle}} style="{{.IconStyle}}"{{end}}></a>
                             {{end}}
                             {{end}}
                         </div>

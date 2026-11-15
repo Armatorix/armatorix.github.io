@@ -1245,7 +1245,11 @@ section .container {
 
 .contact .info-box .social-links a {
   font-size: 20px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  min-height: 38px;
   color: #00ff41;
   line-height: 1;
   transition: all 0.3s ease;
