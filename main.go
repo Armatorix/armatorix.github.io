@@ -2,12 +2,15 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"os"
 	"path/filepath"
 	"sort"
 	"strings"
 	"text/template"
+
+	"rsc.io/qr"
 )
 
 type Personal struct {
@@ -340,6 +343,74 @@ func (m *Me) skills() []SkillGroup {
 	return groups
 }
 
+// ContactPage is the data rendered by templates/contact.html.tpl.
+type ContactPage struct {
+	*Me
+	// QR is an inline SVG encoding the vCard itself, so scanning it offers
+	// to save the contact without opening any page.
+	QR string
+}
+
+var vcardEscaper = strings.NewReplacer(`\`, `\\`, ";", `\;`, ",", `\,`, "\n", `\n`)
+
+// vcard builds a vCard 3.0, the version phone cameras understand best.
+// It is kept short on purpose: every extra byte makes the QR code denser.
+func (m *Me) vcard() string {
+	p := m.Personal
+	esc := vcardEscaper.Replace
+
+	given, family := p.Name, ""
+	if i := strings.LastIndex(p.Name, " "); i >= 0 {
+		given, family = p.Name[:i], p.Name[i+1:]
+	}
+	locality, country, _ := strings.Cut(p.Location, ", ")
+
+	lines := []string{
+		"BEGIN:VCARD",
+		"VERSION:3.0",
+		"N:" + esc(family) + ";" + esc(given) + ";;;",
+		"FN:" + esc(p.Name),
+		"TITLE:" + esc(p.Title),
+		"TEL;TYPE=CELL:" + strings.ReplaceAll(p.Phone, " ", ""),
+		"EMAIL;TYPE=INTERNET:" + p.Email,
+		"URL:https://" + p.Website,
+		"ADR:;;;" + esc(locality) + ";;;" + esc(country),
+		"END:VCARD",
+	}
+	return strings.Join(lines, "\r\n") + "\r\n"
+}
+
+// qrSVG renders text as a QR code: black modules on a white square that
+// includes the 4-module quiet zone scanners expect.
+func qrSVG(text string) (string, error) {
+	code, err := qr.Encode(text, qr.M)
+	if err != nil {
+		return "", err
+	}
+
+	const quiet = 4
+	size := code.Size + 2*quiet
+
+	var b strings.Builder
+	fmt.Fprintf(&b, `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" shape-rendering="crispEdges" aria-hidden="true">`, size, size)
+	fmt.Fprintf(&b, `<rect width="%d" height="%d" fill="#fff"/><path fill="#000" d="`, size, size)
+	for y := 0; y < code.Size; y++ {
+		for x := 0; x < code.Size; x++ {
+			if !code.Black(x, y) {
+				continue
+			}
+			run := 1
+			for x+run < code.Size && code.Black(x+run, y) {
+				run++
+			}
+			fmt.Fprintf(&b, "M%d %dh%dv1h-%dz", x+quiet, y+quiet, run, run)
+			x += run
+		}
+	}
+	b.WriteString(`"/></svg>`)
+	return b.String(), nil
+}
+
 var htmlFuncs = template.FuncMap{
 	"lower": strings.ToLower,
 	"nospace": func(s string) string {
@@ -397,7 +468,17 @@ func main() {
 		log.Fatal(err)
 	}
 
+	vcard := me.vcard()
+	contactQR, err := qrSVG(vcard)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err = os.WriteFile("contact.vcf", []byte(vcard), 0644); err != nil {
+		log.Fatal(err)
+	}
+
 	render("./templates/index.html.tpl", "index.html", htmlFuncs, &me)
+	render("./templates/contact.html.tpl", "contact.html", htmlFuncs, ContactPage{Me: &me, QR: contactQR})
 	render("./templates/main.tex.tpl", "./texassets/main.tex", texFuncs, &me)
 	render("./templates/short.tex.tpl", "./texassets/short.tex", texFuncs, me.short())
 }

@@ -250,6 +250,7 @@
                             <dt>Freelance</dt>
                             <dd>{{.Personal.Freelance}}</dd>
                         </dl>
+                        <a class="btn" href="./contact.html"><i class="ri-qr-code-line" aria-hidden="true"></i>Contact card with QR code</a>
                     </div>
                     <div>
                         <div class="socials">

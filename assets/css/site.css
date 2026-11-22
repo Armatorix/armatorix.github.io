@@ -1,4 +1,4 @@
-/* me.wsokol.dev - main page stylesheet (index.html).
+/* me.wsokol.dev - stylesheet of index.html and contact.html.
    surfing.html still uses the legacy style.css.
 
    Look: tractor green and yellow, square corners and hard plot boundaries,
@@ -765,6 +765,88 @@ footer {
 
 footer a {
   color: var(--yellow);
+}
+
+/* ---------- Contact card page (contact.html) ---------- */
+
+.contact .btn {
+  margin-top: 24px;
+}
+
+.card-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.card-page main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+/* Always black on white, whatever the theme: scanners need the contrast. */
+.qr {
+  background: #fff;
+  box-shadow: 12px 12px 0 var(--yellow);
+}
+
+.qr svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-grid h1 {
+  font-size: clamp(2.4rem, 5vw, 3.75rem);
+}
+
+.card-lines {
+  margin-top: 24px;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
+.card-lines i {
+  margin-right: 12px;
+  color: var(--yellow);
+}
+
+.card-lines a {
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+.card-hint {
+  margin-top: 20px;
+  max-width: 46ch;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.925rem;
+}
+
+@media (max-width: 720px) {
+  .card-page main {
+    align-items: flex-start;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .qr {
+    width: min(100%, 420px);
+    box-shadow: 8px 8px 0 var(--yellow);
+  }
 }
 
 /* ---------- Responsive ---------- */

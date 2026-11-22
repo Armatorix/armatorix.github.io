@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Sokołowski;Wojciech;;;
+FN:Wojciech Sokołowski
+TITLE:solutions engineer
+TEL;TYPE=CELL:+48725205367
+EMAIL;TYPE=INTERNET:sokolwojtek1@gmail.com
+URL:https://me.wsokol.dev
+ADR:;;;Zębowice;;;Poland
+END:VCARD
