@@ -354,8 +354,10 @@ type ContactPage struct {
 var vcardEscaper = strings.NewReplacer(`\`, `\\`, ";", `\;`, ",", `\,`, "\n", `\n`)
 
 // vcard builds a vCard 3.0, the version phone cameras understand best.
-// It is kept short on purpose: every extra byte makes the QR code denser.
-func (m *Me) vcard() string {
+// The full card goes into contact.vcf. The compact one, for the QR code,
+// keeps only what is needed to reach me: every byte less makes the code
+// coarser and easier to scan.
+func (m *Me) vcard(full bool) string {
 	p := m.Personal
 	esc := vcardEscaper.Replace
 
@@ -363,20 +365,31 @@ func (m *Me) vcard() string {
 	if i := strings.LastIndex(p.Name, " "); i >= 0 {
 		given, family = p.Name[:i], p.Name[i+1:]
 	}
-	locality, country, _ := strings.Cut(p.Location, ", ")
+	phone := strings.ReplaceAll(p.Phone, " ", "")
 
 	lines := []string{
 		"BEGIN:VCARD",
 		"VERSION:3.0",
 		"N:" + esc(family) + ";" + esc(given) + ";;;",
 		"FN:" + esc(p.Name),
-		"TITLE:" + esc(p.Title),
-		"TEL;TYPE=CELL:" + strings.ReplaceAll(p.Phone, " ", ""),
-		"EMAIL;TYPE=INTERNET:" + p.Email,
-		"URL:https://" + p.Website,
-		"ADR:;;;" + esc(locality) + ";;;" + esc(country),
-		"END:VCARD",
 	}
+	if full {
+		locality, country, _ := strings.Cut(p.Location, ", ")
+		lines = append(lines,
+			"TITLE:"+esc(p.Title),
+			"TEL;TYPE=CELL:"+phone,
+			"EMAIL;TYPE=INTERNET:"+p.Email,
+			"URL:https://"+p.Website,
+			"ADR:;;;"+esc(locality)+";;;"+esc(country),
+		)
+	} else {
+		lines = append(lines,
+			"TEL:"+phone,
+			"EMAIL:"+p.Email,
+			"URL:https://"+p.Website,
+		)
+	}
+	lines = append(lines, "END:VCARD")
 	return strings.Join(lines, "\r\n") + "\r\n"
 }
 
@@ -468,12 +481,11 @@ func main() {
 		log.Fatal(err)
 	}
 
-	vcard := me.vcard()
-	contactQR, err := qrSVG(vcard)
+	contactQR, err := qrSVG(me.vcard(false))
 	if err != nil {
 		log.Fatal(err)
 	}
-	if err = os.WriteFile("contact.vcf", []byte(vcard), 0644); err != nil {
+	if err = os.WriteFile("contact.vcf", []byte(me.vcard(true)), 0644); err != nil {
 		log.Fatal(err)
 	}
 
