@@ -202,10 +202,9 @@
                     ],
                     "responsibilities": [
                         "Building a free farm management web app (PWA) from scratch: fields with maps, treatment logs, harvests, warehouse, soil tests and compliance reports",
+                        "Platform used by 250+ farms registered only in the first 3 months",
                         "Integrating public agricultural data: ARiMR eWniosek import, IMGW weather, GUGiK orthophotos, MATIF prices and the MRiRW plant protection register",
-                        "Running a grain purchase price tracker across Polish buyers with price alerts",
-                        "Adding an AI advisor over farm data and an MCP server for AI assistants",
-                        "Platform used by 250+ farms registered only in the first 3 months"
+                        "Adding an AI advisor over farm data and an MCP server for AI assistants"
                     ]
                 }
             ]
